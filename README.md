@@ -6,45 +6,44 @@ Our aim is to convert this code into a kubeflow pipeline.
 # Pipeline parameters
 | Pipeline parameter | Description |
 | ------ | ------ |
-|dataset_url | url of the dataset (e.g https://zenodo.org/record/3678171/files/dev_data_fan.zip)|
-
-Some options for the dataset url are:
-
-* Fan dataset: https://zenodo.org/record/3678171/files/dev_data_fan.zip
+|squad_url| Url from the squad model to be used in zip format (e.g 'http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip')|
+|squad_load_path|' Path of the loaded model in squad_url's files (e.g '/save/out/squad/basic/00/save/basic-2000')|
+|squad_shared_path|' Path of the shared.json in squad_url's files (e.g '/save/out/squad/basic/00/shared.json')|
+|train_run_id| id of the run (e.g '00')|
+|train_sent_size_th| String representing the maximum length (# of words) of each sentence (e.g '150')|
+|train_ques_size_th| String representing the maximum number of words composing the question (e.g '100')|
+|train_num_epochs| Number of epochs to train the model (e.g '12')|
+|train_num_steps| Number of steps to train the model (e.g '55')|
+|train_eval_period| Period to perform evaluation on train (e.g '50')|
+|train_save_period| Period to perform save on train (e.g '10')|
+|test_start_step| Integer representing the step to start. Depends on the selected model (e.g if we use basic-2000 in load_path, starting step will be 2001)| 
+|test_end_step| Integer representing the step to end. Must be strictly higher than test_start_step (e.g 2002)|
+|test_eval_period| Period to perform evaluation on test (e.g '10')|
+|test_threshold| Float representing test threshold (e.g 0.5)|
+|test_th|  Integer for computing Precision up to a given threshold (e.g 10)|
+|test_reranking_th| If maximum prediction score for a set of candidates is below this threshold, do not re-rank the candiate list. (e.g 10)|
+|test_format| Format of the result file (e.g 'trec' or 'answerbag')|
+|test_verbose| Produce verbose output (e.g False)|
+|test_ignore_noanswer| Ignore questions with no correct answer (e.g False)|
 
 # Pipeline stages #
 
 ![pipeline.png](./data/images/pipeline.png)
 
 ##### 1. Download dataset ([code](./src/download.py))
-This component, given the dataset url, downloads all its contents inside an OutputPath Artifact.
+This component downloads the pretrained squad model , glove and semeval dataset inside an OutputPath Artifact
 
-##### 2. Train ([code](./src/train.py))
-This component performs the following operations:
+##### 2. Preprocess ([code](./src/semeval_prepro.py))
+This component preprocess the semeval dataset and save generated files inside an OutputPath Artifact.
 
-    1. Given an InputPath containing the previously downloaded dataset, extracts all the training files (audio), converting them into numeric arrays.
-    2. Uses those arrays, trains a model with the specified parameters.
-    3. Save the model in an OutputPath Artifact.
-    4. Generate a loss plot, saves it in an OutputArtifact and embed its visualization inside a web-app component.
+##### 3. Train ([code](./src/semeval_train.py))
+This component trains the semeval dataset taken into account both semeval preprocess generated files and squad model, and save generated model inside an OutputPath Artifact.
 
-##### 3. Test ([code](./src/test.py))
-This component performs the following operations:
+##### 4. Generate test files ([code](./src/generate_semeval_test_files.py))
+This component generated some needed files for test inside an OutputPath Artifact taking into account the generated model.
 
-    1. Loads the previously saved model through an InputPath Artifact.
-    2. Given an InputPath containing the previously downloaded dataset, extracts all the testing files (audio), converting them into numeric arrays.
-    3. Uses those arrays to test the model.
-    4. Saves the  inside a file generated as an OutputPath Artifact(results_path).
-    5. Saves true labels and predicted scores to pass it later to the ROC curve.
-    6. Saves the name, AUC and pAUC for each subgroup of the test into a results OutputPath Artifact.
-    7. Saves the scores for the anomalies files of the test into a anomaly_dir OutputPath Artifact.
-    6. Saves accuracy as metrics that will later be passed to the Metrics component.
-
-##### 4.1. ROC Curve ([code](./src/roc_curve.py))
-This component is passed the labels directory, which contains true labels and predicted scores, and generates a roc curve that the kubeflow UI can understand. This function can be reused in other pipelines if given the appropiate parameters.
-
-##### 4.2. Metrics ([code](./src/metrics.py))
-This component is passed the mlpipelinemetrics which contains metrics and generates a visualization of them that the kubeflow UI can understand.
-
+##### 5. Test ([code](./src/semeval_test.py))
+This component prints the MAP, MRR and AvgRecall of the generated model.
 
 # File generation #
 To generate the pipeline from the python file, execute the following command:
@@ -71,14 +70,6 @@ In order to check the validity of the pipeline, we are going to execute a run wi
 | ------ | ------ |
 |dataset_url |
 https://zenodo.org/record/3678171/files/dev_data_pump.zip|
-
-### Loss plot ###
-
-![lossplot.png](./data/images/lossplot.png)
-
-### ROC Curve ###
-
-![roccurve.png](./data/images/roccurve.png)
 
 ### Metrics ###
 The original results are shown in . In particular, the results for the this task are:
