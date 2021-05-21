@@ -16,7 +16,7 @@ Our aim is to convert this code into a kubeflow pipeline.
 |train_num_steps| Number of steps to train the model (e.g '55')|
 |train_eval_period| Period to perform evaluation on train (e.g '50')|
 |train_save_period| Period to perform save on train (e.g '10')|
-|test_start_step| Integer representing the step to start. Depends on the selected model (e.g if we use basic-2000 in load_path, starting step will be 2001)| 
+|test_start_step| Integer representing the step to start. Depends on the selected model (e.g if we use basic-2000 in load_path, starting step will be 2001)|
 |test_end_step| Integer representing the step to end. Must be strictly higher than test_start_step (e.g 2002)|
 |test_eval_period| Period to perform evaluation on test (e.g '10')|
 |test_threshold| Float representing test threshold (e.g 0.5)|
@@ -76,7 +76,7 @@ In order to check the validity of the pipeline, we are going to execute a run. A
 |train_num_steps| '1'|
 |train_eval_period| '1'|
 |train_save_period| '1'|
-|test_start_step| 2001 | 
+|test_start_step| 2001 |
 |test_end_step| 2002|
 |test_eval_period| '1'|
 |test_threshold| 0.5 |
