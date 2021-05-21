@@ -1,7 +1,7 @@
 from kfp.components import OutputPath
 
 
-def step1(squad_url, dataset_path: OutputPath()):
+def download(squad_url, dataset_path: OutputPath()):
     import requests
     import json
     import zipfile

@@ -1,9 +1,8 @@
 from kfp.components import OutputPath, InputPath
 
 
-def step3(dataset_path : InputPath(str), semeval_path : InputPath(str), load_path, shared_path,
-          run_id, sent_size_th, ques_size_th, num_epochs, num_steps, eval_period, save_period,
-          model_path: OutputPath(str)):
+def semeval_train(dataset_path : InputPath(str), semeval_path : InputPath(str), load_path, shared_path, 
+                  run_id, sent_size_th, ques_size_th, num_epochs, num_steps, eval_period, save_period, model_path: OutputPath(str)):
     import os
     import tensorflow as tf
     from basic.cli import main

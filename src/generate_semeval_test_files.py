@@ -1,8 +1,8 @@
 from kfp.components import OutputPath, InputPath
 
 
-def step4(semeval_path : InputPath(str), model_path : InputPath(str), start_step, end_step,
-          eval_period, run_ids, threshold, test_path : OutputPath(str)):
+def generate_semeval_test_files(semeval_path : InputPath(str), model_path : InputPath(str), start_step, end_step,
+                                eval_period, run_ids, threshold, test_path : OutputPath(str)):
     import os
     from semeval.result import load_data, evaluate
 

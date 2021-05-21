@@ -59,30 +59,45 @@ Once the pipeline has been created, we can upload the generated zip file in kube
 
 # Experimental results #
 
-In this section we will replicate the results for the pump dataset in the [DCASE 2020 Challenge Task 2 "Unsupervised Detection of Anomalous Sounds for Machine Condition Monitoring"](https://github.com/y-kawagu/dcase2020_task2_baseline/README.md).
-The pipeline outputs are a loss plot, a roc curve, and different metrics, from which metrics can be directly compared.
-We can see them in the visualizations of the pipeline or in the Run Output Tab of the Run.
-
-In order to check the validity of the pipeline, we are going to execute a run with the same parameters as the original experiment and compare the outputs with the ones obtained in [the original code](https://github.com/y-kawagu/dcase2020_task2_baseline).
+In this section we will replicate the results for the semeval dataset in the [Question Answering through Transfer Learning from Large Fine-grained Supervision Data](https://github.com/sciling/qatransfer/blob/master/run.md).
+The pipeline outputs different metrics from which can be directly compared.
+In order to check the validity of the pipeline, we are going to execute a run. As we do not dispose of a capable machine nor a squad model pretrained with the same parameters as the one in the original experiment, the obtained results may be a bit worse than the original ones.
 
 ### Input parameters ###
 | Pipeline parameter | Value |
 | ------ | ------ |
-|dataset_url |
-https://zenodo.org/record/3678171/files/dev_data_pump.zip|
+|squad_url| 'http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip' |
+|squad_load_path| '/save/out/squad/basic/00/save/basic-2000' |
+|squad_shared_path| '/save/out/squad/basic/00/shared.json' |
+|train_run_id| '00' |
+|train_sent_size_th| '10'|
+|train_ques_size_th| '10'|
+|train_num_epochs| '1'|
+|train_num_steps| '1'|
+|train_eval_period| '1'|
+|train_save_period| '1'|
+|test_start_step| 2001 | 
+|test_end_step| 2002|
+|test_eval_period| '1'|
+|test_threshold| 0.5 |
+|test_th|  10|
+|test_reranking_th| 10|
+|test_format| 'trec'|
+|test_verbose| False |
+|test_ignore_noanswer| False|
 
 ### Metrics ###
-The original results are shown in . In particular, the results for the this task are:
+Using a pretrained squad model with one epoch and executing the pipeline with the previously defined parameters, we obtain the following results:
 
-| id | AUC | pAUC
+
+The original results are shown in . In particular, the results are:
+
+| MAP | MRR | P@1
 | ------ | ------ | ------ |
+| 78.37 | 85.58	 | 87.68 |
 
-In our replication, we get similar results (our results are in percentage format):
+In our replication, we get way worse results as expected because of the machine and the squad mdoel:
 
-| id | AUC | pAUC
+| MAP | MRR | AvgRec
 | ------ | ------ | ------ |
-
-If we increase the number of epochs to 150, and the validation split to 0.15, the results improve a little:
-
-| id | AUC | pAUC
-| ------ | ------ | ------ |
+| 59.53 | 67.83 | 72.60 |

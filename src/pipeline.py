@@ -29,17 +29,17 @@ def qa_pipeline(
     test_verbose : bool = False,
     test_ignore_noanswer : bool = False,
 ):
-    from download import step1
-    from semeval_prepro import step2
-    from semeval_train import step3
-    from generate_semeval_test_files import step4
-    from semeval_test import step5
+    from download import download
+    from semeval_prepro import semeval_prepro
+    from semeval_train import semeval_train
+    from generate_semeval_test_files import generate_semeval_test_files
+    from semeval_test import semeval_test
 
-    download_op = comp.func_to_container_op(step1, base_image='tensorflow/tensorflow:latest-gpu-py3', packages_to_install=['tqdm'])
-    semeval_prepro_op = comp.func_to_container_op(step2, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
-    semeval_train_op = comp.func_to_container_op(step3, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
-    semeval_generate_test_files_op = comp.func_to_container_op(step4, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
-    semeval_test_op = comp.func_to_container_op(step5, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
+    download_op = comp.func_to_container_op(download, base_image='tensorflow/tensorflow:latest-gpu-py3', packages_to_install=['tqdm'])
+    semeval_prepro_op = comp.func_to_container_op(semeval_prepro, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
+    semeval_train_op = comp.func_to_container_op(semeval_train, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
+    semeval_generate_test_files_op = comp.func_to_container_op(generate_semeval_test_files, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
+    semeval_test_op = comp.func_to_container_op(semeval_test, base_image='sciling/tensorflow:0.12.0-py3', packages_to_install=["https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"])
 
     # Download
     dataset_path = download_op(squad_url)

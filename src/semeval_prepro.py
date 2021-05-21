@@ -1,7 +1,7 @@
 from kfp.components import OutputPath, InputPath
 
 
-def step2(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
+def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
     import json
     import xmltodict
     import numpy as np

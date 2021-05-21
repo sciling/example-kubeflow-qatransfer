@@ -1,7 +1,7 @@
 from kfp.components import OutputPath, InputPath
 
 
-def step5(test_path: InputPath(str), run_id, start_step, end_step, th, reranking_th, op_format, verbose, ignore_noanswer):
+def semeval_test(test_path: InputPath(str), run_id, start_step, end_step, th, reranking_th, op_format, verbose, ignore_noanswer):
     import sys
     from semeval.evaluation.MAP_scripts.ev import eval_search_engine, eval_reranker
 
