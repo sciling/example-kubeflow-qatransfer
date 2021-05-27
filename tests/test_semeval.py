@@ -10,10 +10,10 @@ import os
 import pathlib
 import tempfile
 
-from src.generate_semeval_test_files import generate_semeval_test_files
-from src.semeval_prepro import semeval_prepro
-from src.semeval_test import semeval_test
-from src.semeval_train import semeval_train
+from src.semeval.generate_semeval_test_files import generate_semeval_test_files
+from src.semeval.semeval_prepro import semeval_prepro
+from src.semeval.semeval_test import semeval_test
+from src.semeval.semeval_train import semeval_train
 
 
 # DATA_DIR = f"{pathlib.Path(__file__).parent.absolute()}/../data/test/"
