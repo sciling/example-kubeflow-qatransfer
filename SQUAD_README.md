@@ -87,5 +87,3 @@ The original results are shown in . In particular, the results are:
 | 82.86 | ?? |
 
 In our replication, we get way worse results as expected because of the machine and the poor parameters.
-
-
