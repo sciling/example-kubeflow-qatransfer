@@ -1,8 +1,12 @@
-from kfp.components import OutputPath
+try:
+    from kfp.components import OutputPath
+except ImportError:
+
+    def OutputPath(c):
+        return c
 
 
 def download(squad_url, dataset_path: OutputPath()):
-    import json
     import os
     import tempfile
     import zipfile
