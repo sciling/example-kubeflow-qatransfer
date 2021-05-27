@@ -9,30 +9,22 @@ on:
 jobs:
   tests:
     # The type of runner that the job will run on
-    name: ${{ matrix.os }} / ${{ matrix.python-version }}
+    name: ${{ matrix.os }} / ${{ matrix.docker-image-version }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
       matrix:
-        os: [Ubuntu, MacOS]
-        # Some packages don't compile nor have wheels available for 3.9.
-        # In particular, llvmlite works from version 0.36.0,
-        # but that forces you to upgrade numba to 0.53 which is incompatible.
-        # Something similar happens with grpcio
-        python-version: [3.8] #  , 3.9]
+        # We need to use docker because the combination of python package
+        # versions is difficult to install in local since some versions
+        # are actually quite old. Thus, it makes no sense to test in Macosx
+        # or Windows since in the end it all runs inside the docker container.
+        os: [Ubuntu]
+        docker-image-version: [sciling/tensorflow:0.12.0-py3]
       fail-fast: false
     steps:
     #----------------------------------------------
     # check-out repo and set-up python
     #----------------------------------------------
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Get full Python version
-      id: full-python-version
-      shell: bash
-      run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
 
     #----------------------------------------------
     # install & configure poetry

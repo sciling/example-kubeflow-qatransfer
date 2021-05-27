@@ -20,6 +20,9 @@ from src.semeval.semeval_train import semeval_train
 
 
 class TestAll(TestCase):
+    def test_test(self):
+        pass
+
     def prepro_test(self):
         import zipfile
 

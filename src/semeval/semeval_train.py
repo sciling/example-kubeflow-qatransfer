@@ -1,5 +1,13 @@
-from kfp.components import InputPath
-from kfp.components import OutputPath
+try:
+    from kfp.components import InputPath
+    from kfp.components import OutputPath
+except ImportError:
+
+    def InputPath(c):
+        return c
+
+    def OutputPath(c):
+        return c
 
 
 def semeval_train(
@@ -16,8 +24,6 @@ def semeval_train(
     save_period,
     model_path: OutputPath(str),
 ):
-    import os
-
     import tensorflow as tf
 
     from basic.cli import main

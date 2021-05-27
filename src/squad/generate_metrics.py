@@ -1,6 +1,12 @@
 import typing
 
-from kfp.components import InputPath
+
+try:
+    from kfp.components import InputPath
+except ImportError:
+
+    def InputPath(c):
+        return c
 
 
 def generate_metrics(
