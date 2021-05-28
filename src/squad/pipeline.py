@@ -19,12 +19,14 @@ def qa_pipeline(
     train_num_steps: str = "20000",
     train_eval_period: str = "500",
     train_save_period: str = "500",
+    train_learning_rate: float = 0.5,
+    train_batch_size: int = 60,
+    train_hidden_size: int = 100,
+    train_var_decay: float = 0.999
 ):
     # Creating containers from python functions
     from test import test
-
     from download import download
-    from generate_metrics import generate_metrics
     from prepro import prepro_basic
     from train import train
 
@@ -56,13 +58,6 @@ def qa_pipeline(
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
-    generate_metrics_op = func_to_container_op(
-        generate_metrics,
-        base_image="sciling/tensorflow:0.12.0-py3",
-        packages_to_install=[
-            "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
-        ],
-    )
 
     dataset_path = download_op()
     prepro_span = squad_preprocess_op(
@@ -82,8 +77,12 @@ def qa_pipeline(
         train_num_steps,
         train_eval_period,
         train_save_period,
+        train_learning_rate,
+        train_batch_size,
+        train_hidden_size,
+        train_var_decay
     ).set_memory_request("4G")
-    metrics = squad_test_op(
+    squad_test_op(
         prepro_span.output,
         model.output,
         train_sent_size_th,
@@ -92,9 +91,11 @@ def qa_pipeline(
         train_num_steps,
         train_eval_period,
         train_save_period,
+        train_learning_rate,
+        train_batch_size,
+        train_hidden_size,
+        train_var_decay
     )
-    generate_metrics_op(metrics.outputs["metrics"])
-
 
 if __name__ == "__main__":
     # Compile pipeline to generate compressed YAML definition of the pipeline.
