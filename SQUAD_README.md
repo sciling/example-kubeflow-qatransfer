@@ -34,7 +34,7 @@ This component trains the squad dataset taken into account squad preprocess gene
 ##### 4. Test ([code](./src/squad/test.py))
 This component generated tested the model and saved some metrics in an OutputPath Artifact.
 
-##### 5. Test ([code](./src/squad/generate_metrics.py))
+##### 5. Metric generator ([code](./src/squad/generate_metrics.py))
 This component creates a metric that the kubeflow UI can understand in order to visualize the accuracy and f1-score of the trained model.
 
 # File generation #
@@ -49,7 +49,14 @@ Also, if you want to run all tests locally, execute:
 
 Once the pipeline has been created, we can upload the generated zip file in kubeflow UI and create runs of it.
 
-Once the model has been created, you can download it inside the minio server. In the semeval pipeline, you need a link that downloads the squad model as a zip. To obtain that, you could simply upload the zipped model inside some Github release and find out the link of the download. In order to find out the link of the download, you just need to check the requested url in the request made when you manually click on download the model.
+# Upload generated model
+
+In the semeval pipeline, you need a link that downloads the squad model as a zip. In order to achieve that, one alternative could be:
+
+1.  Download the generated model from the minio server.
+2.  Create a Github release and upload there the zipped model.
+3.  Check the request made by your browser when you click on the released model. In the request, there will be a link similar to http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip that will work as squad_url in the semeval pipeline.
+
 
 # Experimental results #
 
