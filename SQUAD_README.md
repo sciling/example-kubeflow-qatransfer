@@ -23,9 +23,12 @@ The aim of this pipeline is to train an expert model of question answering with 
 |train_var_decay| Integer representing the exponential decay (e.g 0.999)|
 
 # Default parameters #
+Taking into account the following text extracted from [BI-DIRECTIONAL ATTENTION FLOW
+FOR MACHINE COMPREHENSION]( https://arxiv.org/pdf/1611.01603.pdf#page=6),
 
-Taking into account [BI-DIRECTIONAL ATTENTION FLOW
-FOR MACHINE COMPREHENSION]( https://arxiv.org/pdf/1611.01603.pdf#page=6), we have defined default parameters as optimal ones:
+![pipeline.png](./data/images/paper_snippet.png)
+
+we have defined default parameters as optimal ones:
 | Pipeline parameter | Description |
 | ------ | ------ |
 |prepro_train_ratio| 0.9 |
