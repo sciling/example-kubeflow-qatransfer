@@ -87,10 +87,10 @@ Using the predefined parameters, we obtain the following results:
 | ------ | ------ |
 | 0.008	 | 0.030 |
 
-The original results are shown in . In particular, the results are:
+The original results are shown in. In particular, we show the accuracy achived in ["Question Answering through Transfer Learning from Large Fine-grained Supervision Data](https://www.aclweb.org/anthology/P17-2081.pdf) and the F1 score achieved in [Bi-directional Attention Flow](https://arxiv.org/pdf/1611.01603.pdf):
 
 | Accuracy | f1-score |
 | ------ | ------ |
-| 82.86 | ?? |
+| 82.86 | 81.1 |
 
 In our replication, we get way worse results as expected because of the machine and the poor parameters.
