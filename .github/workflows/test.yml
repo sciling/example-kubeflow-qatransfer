@@ -18,7 +18,7 @@ jobs:
         # are actually quite old. Thus, it makes no sense to test in Macosx
         # or Windows since in the end it all runs inside the docker container.
         os: [Ubuntu]
-        docker-image-version: [sciling/tensorflow:0.12.0-py3]
+        docker-image-version: ["sciling/tensorflow:0.12.0-py3"]
       fail-fast: false
     steps:
     #----------------------------------------------
@@ -27,34 +27,8 @@ jobs:
     - uses: actions/checkout@v2
 
     #----------------------------------------------
-    # install & configure poetry
-    #----------------------------------------------
-    - name: Install Poetry
-      uses: snok/install-poetry@v1.1.2
-      with:
-        virtualenvs-create: true
-        virtualenvs-in-project: true
-
-    #----------------------------------------------
-    # load cached venv if cache exists
-    #----------------------------------------------
-    - name: Load cached venv
-      id: cached-poetry-dependencies
-      uses: actions/cache@v2
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-
-    #----------------------------------------------
-    # install dependencies
-    #----------------------------------------------
-    - name: Install dependencies
-      shell: bash
-      run: make install
-
-    #----------------------------------------------
     # run test suite
     #----------------------------------------------
-    - name: Run pytest
+    - name: Run tests
       shell: bash
-      run: make tests
+      run: docker run --rm -v $PWD:/qa-transfer -w /qa-transfer ${{ matrix.docker-image-version }} make tests
