@@ -10,6 +10,9 @@ except ImportError:
         return c
 
 
+metrics = "Metrics"
+
+
 def test(
     prepro_dir: InputPath(str),
     prev_model_dir: InputPath(str),
@@ -23,7 +26,7 @@ def test(
     batch_size,
     hidden_size,
     var_decay,
-    mlpipeline_metrics_path: OutputPath("Metrics"),
+    mlpipeline_metrics_path: OutputPath(metrics),
     model_dir: OutputPath(str),
 ):
 
