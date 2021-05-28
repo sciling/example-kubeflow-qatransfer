@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "example-kubeflow-qatransfer"
+version = "0.1.0"
+description = ""
+authors = ["Phil Winder <phil@WinderResearch.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+
+[tool.poetry.dev-dependencies]
+coverage = "4.5.4"
+flake8 = "3.8.4"
+pre-commit = "1.18.3"
+pytest = "4.6.11"
+pyyaml = "5.1.2"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+src_paths = ["src", "tests"]
+skip_glob = ["*/setup.py"]
+filter_files = true
+known_first_party = "src"
+
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | tests/.*/setup.py
+)/
+'''
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:"
+]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+    "poetry-core>=1.0.0",
+    "setuptools>=30.3.0,<50",
+    "wheel",
+    "pytest-runner",
+]

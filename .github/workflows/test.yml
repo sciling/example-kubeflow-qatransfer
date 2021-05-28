@@ -1,0 +1,34 @@
+name: test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    # The type of runner that the job will run on
+    name: ${{ matrix.os }} / ${{ matrix.docker-image-version }}
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      matrix:
+        # We need to use docker because the combination of python package
+        # versions is difficult to install in local since some versions
+        # are actually quite old. Thus, it makes no sense to test in Macosx
+        # or Windows since in the end it all runs inside the docker container.
+        os: [Ubuntu]
+        docker-image-version: ["sciling/tensorflow:0.12.0-py3"]
+      fail-fast: false
+    steps:
+    #----------------------------------------------
+    # check-out repo and set-up python
+    #----------------------------------------------
+    - uses: actions/checkout@v2
+
+    #----------------------------------------------
+    # run test suite
+    #----------------------------------------------
+    - name: Run tests
+      shell: bash
+      run: docker run --rm -v $PWD:/qa-transfer -w /qa-transfer ${{ matrix.docker-image-version }} make tests
