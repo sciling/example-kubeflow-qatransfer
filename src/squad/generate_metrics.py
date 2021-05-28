@@ -1,4 +1,4 @@
-import typing
+from collections import namedtuple
 
 
 try:
@@ -8,10 +8,12 @@ except ImportError:
     def InputPath(c):
         return c
 
+Metrics = namedtuple("Outputs", [("mlpipeline_metrics", "Metrics")])
+
 
 def generate_metrics(
     mlpipelinemetrics_path: InputPath(),
-) -> typing.NamedTuple("Outputs", [("mlpipeline_metrics", "Metrics")]):
+) -> Metrics:
     import json
 
     with open(mlpipelinemetrics_path, "r") as f:
