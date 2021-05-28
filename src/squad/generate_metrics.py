@@ -8,6 +8,7 @@ except ImportError:
     def InputPath(c):
         return c
 
+
 Metrics = namedtuple("Outputs", [("mlpipeline_metrics", "Metrics")])
 
 
