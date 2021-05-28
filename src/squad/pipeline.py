@@ -7,18 +7,18 @@ from kfp.components import func_to_container_op
 # Define the pipeline
 @dsl.pipeline(name="pipeline_model_squad", description="")
 def qa_pipeline(
-    prepro_train_ratio: float = 0.7,
+    prepro_train_ratio: float = 0.9,
     prepro_glove_vec_size: int = 100,
     prepro_mode: str = "full",
     prepro_tokenizer: str = "PTB",
     prepro_url: str = "vision-server2.corp.ai2",
     prepro_port: int = 8000,
-    train_sent_size_th: str = "150",
-    train_ques_size_th: str = "100",
+    train_sent_size_th: str = "500",
+    train_ques_size_th: str = "30",
     train_num_epochs: str = "12",
-    train_num_steps: str = "55",
-    train_eval_period: str = "50",
-    train_save_period: str = "10",
+    train_num_steps: str = "20000",
+    train_eval_period: str = "500",
+    train_save_period: str = "500",
 ):
     # Creating containers from python functions
     from test import test
