@@ -23,7 +23,7 @@ def test(
     batch_size,
     hidden_size,
     var_decay,
-    mlpipeline_metrics_path: OutputPath('Metrics'),
+    mlpipeline_metrics_path: OutputPath("Metrics"),
     model_dir: OutputPath(str),
 ):
 
@@ -126,7 +126,9 @@ def test(
         "Share pre-processing (phrase-level) LSTM weights [True]",
     )
     flags.DEFINE_float(
-        "var_decay", float(var_decay), "Exponential moving average decay for variables [0.999]"
+        "var_decay",
+        float(var_decay),
+        "Exponential moving average decay for variables [0.999]",
     )
     flags.DEFINE_string("classifier", "maxpool", "[maxpool, sumpool, default]")
 

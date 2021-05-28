@@ -22,10 +22,11 @@ def qa_pipeline(
     train_learning_rate: float = 0.5,
     train_batch_size: int = 60,
     train_hidden_size: int = 100,
-    train_var_decay: float = 0.999
+    train_var_decay: float = 0.999,
 ):
     # Creating containers from python functions
     from test import test
+
     from download import download
     from prepro import prepro_basic
     from train import train
@@ -80,7 +81,7 @@ def qa_pipeline(
         train_learning_rate,
         train_batch_size,
         train_hidden_size,
-        train_var_decay
+        train_var_decay,
     ).set_memory_request("4G")
     squad_test_op(
         prepro_span.output,
@@ -94,8 +95,9 @@ def qa_pipeline(
         train_learning_rate,
         train_batch_size,
         train_hidden_size,
-        train_var_decay
+        train_var_decay,
     )
+
 
 if __name__ == "__main__":
     # Compile pipeline to generate compressed YAML definition of the pipeline.
