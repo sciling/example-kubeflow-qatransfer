@@ -62,35 +62,38 @@ def download_dataset():
     print(os.listdir(SQUAD_DIR))
 
 
-def del_all_flags(FLAGS):
-    flags_dict = FLAGS._flags()
-    keys_list = [keys for keys in flags_dict]
-    for keys in keys_list:
-        FLAGS.__delattr__(keys)
-
-
 class TestAll(TestCase):
-    """def test_prepro(self):
-    from src.squad.prepro import prepro_basic
-    download_dataset()
-    # Directory of the model
-    squad_path = tempfile.mkdtemp()
-    dataset_path = WORK_DIR
-    train_ratio = 0.9
-    glove_vec_size = 100
-    mode = "full"
-    tokenizer = "PTB"
-    url = "vision-server2.corp.ai2"
-    port = 8000
-    prepro_basic(dataset_path, train_ratio, glove_vec_size, mode, tokenizer, url, port, squad_path)
+    def test_prepro(self):
+        from src.squad.prepro import prepro_basic
 
-    # Check model directory has all files
-    self.assertIn("data_dev.json", os.listdir(squad_path + "/squad"))
-    self.assertIn("data_test.json", os.listdir(squad_path + "/squad"))
-    self.assertIn("data_train.json", os.listdir(squad_path + "/squad"))
-    self.assertIn("shared_dev.json", os.listdir(squad_path + "/squad"))
-    self.assertIn("shared_test.json", os.listdir(squad_path + "/squad"))
-    self.assertIn("shared_train.json", os.listdir(squad_path + "/squad"))"""
+        download_dataset()
+        # Directory of the model
+        squad_path = tempfile.mkdtemp()
+        dataset_path = WORK_DIR
+        train_ratio = 0.9
+        glove_vec_size = 100
+        mode = "full"
+        tokenizer = "PTB"
+        url = "vision-server2.corp.ai2"
+        port = 8000
+        prepro_basic(
+            dataset_path,
+            train_ratio,
+            glove_vec_size,
+            mode,
+            tokenizer,
+            url,
+            port,
+            squad_path,
+        )
+
+        # Check model directory has all files
+        self.assertIn("data_dev.json", os.listdir(squad_path + "/squad"))
+        self.assertIn("data_test.json", os.listdir(squad_path + "/squad"))
+        self.assertIn("data_train.json", os.listdir(squad_path + "/squad"))
+        self.assertIn("shared_dev.json", os.listdir(squad_path + "/squad"))
+        self.assertIn("shared_test.json", os.listdir(squad_path + "/squad"))
+        self.assertIn("shared_train.json", os.listdir(squad_path + "/squad"))
 
     def test_train(self):
         # Directory of the model
@@ -128,6 +131,7 @@ class TestAll(TestCase):
                 var_decay,
                 model_path,
             )
+
         except SystemExit:
             print("Finished successfully!")
         # Check model directory has all files
