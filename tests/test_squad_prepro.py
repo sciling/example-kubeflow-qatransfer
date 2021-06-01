@@ -4,8 +4,6 @@ import sys
 import tempfile
 import unittest
 
-from unittest import TestCase
-
 
 sys.path.append("..")
 
@@ -62,7 +60,7 @@ def download_dataset():
     print(os.listdir(SQUAD_DIR))
 
 
-class TestAll(TestCase):
+class TestAll(unittest.TestCase):
     def test_prepro(self):
         from src.squad.prepro import prepro_basic
 
@@ -94,99 +92,6 @@ class TestAll(TestCase):
         self.assertIn("shared_dev.json", os.listdir(squad_path + "/squad"))
         self.assertIn("shared_test.json", os.listdir(squad_path + "/squad"))
         self.assertIn("shared_train.json", os.listdir(squad_path + "/squad"))
-
-    def test_train(self):
-        # Directory of the model
-        import tensorflow as tf
-
-        from src.squad.train import train
-
-        squad_path = DATA_DIR
-        sent_size_th = "10"
-        ques_size_th = "10"
-        num_epochs = "1"
-        num_steps = "1"
-        eval_period = "1"
-        save_period = "1"
-        learning_rate = "0.5"
-        batch_size = "60"
-        hidden_size = "100"
-        var_decay = "0.999"
-        model_path = tempfile.mkdtemp()
-        try:
-            import argparse as _argparse
-
-            tf.app.flags._global_parser = _argparse.ArgumentParser()
-            train(
-                squad_path,
-                sent_size_th,
-                ques_size_th,
-                num_epochs,
-                num_steps,
-                eval_period,
-                save_period,
-                learning_rate,
-                batch_size,
-                hidden_size,
-                var_decay,
-                model_path,
-            )
-
-        except SystemExit:
-            print("Finished successfully!")
-        # Check model directory has all files
-        self.assertIn("out", os.listdir(model_path))
-        self.assertIn("squad", os.listdir(model_path + "/out"))
-
-    def test_test(self):
-        import json
-
-        import tensorflow as tf
-
-        from src.squad.test import test
-
-        prepro_dir = DATA_DIR
-        prev_model_dir = DATA_DIR
-        sent_size_th = "10"
-        ques_size_th = "10"
-        num_epochs = "1"
-        num_steps = "1"
-        eval_period = "1"
-        save_period = "1"
-        learning_rate = "0.5"
-        batch_size = "60"
-        hidden_size = "100"
-        var_decay = "0.999"
-        mlpipeline_metrics_path = tempfile.NamedTemporaryFile()
-        model_dir = tempfile.mkdtemp()
-        try:
-            test(
-                prepro_dir,
-                prev_model_dir,
-                sent_size_th,
-                ques_size_th,
-                num_epochs,
-                num_steps,
-                eval_period,
-                save_period,
-                learning_rate,
-                batch_size,
-                hidden_size,
-                var_decay,
-                mlpipeline_metrics_path.name,
-                model_dir,
-            )
-
-            mlpipeline_metrics_path.close()
-        except SystemExit:
-            print("Finished successfully!")
-
-        with open(mlpipeline_metrics_path.name, "r") as f:
-            metrics = json.load(f)
-        self.assertIn("metrics", list(metrics.keys()))
-        self.assertEqual(2, len(list(metrics["metrics"])))
-        self.assertEqual("accuracy-score", metrics["metrics"][0]["name"])
-        self.assertEqual("f1-score", metrics["metrics"][1]["name"])
 
 
 if __name__ == "__main__":
