@@ -56,6 +56,10 @@ Also, if you want to run all tests locally, execute:
 
 Once the pipeline has been created, we can upload the generated zip file in kubeflow UI and create runs of it.
 
+# Testing #
+In order to perform several tests, please place yourself at the root of this project and execute:
+```./run_semeval_tests.sh  ```
+
 # Experimental results #
 
 In this section we will replicate the results for the semeval dataset in the [Question Answering through Transfer Learning from Large Fine-grained Supervision Data](https://github.com/sciling/qatransfer/blob/master/run.md).

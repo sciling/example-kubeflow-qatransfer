@@ -8,7 +8,7 @@ import unittest
 sys.path.append("..")
 
 
-DATA_DIR = "%s/../data/test/squad_files" % pathlib.Path(__file__).parent.absolute()
+DATA_DIR = "%s/../../data/test/squad_files" % pathlib.Path(__file__).parent.absolute()
 WORK_DIR = tempfile.mkdtemp()
 
 

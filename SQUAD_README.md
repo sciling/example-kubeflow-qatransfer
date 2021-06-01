@@ -84,6 +84,9 @@ In the semeval pipeline, you need a link that downloads the squad model as a zip
 2.  Create a Github release and upload there the zipped model.
 3.  Check the request made by your browser when you click on the released model. In the request, there will be a link similar to http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip that will work as squad_url in the semeval pipeline.
 
+# Testing #
+In order to perform several tests, please place yourself at the root of this project and execute:
+``` ./run_squad_tests.sh ```
 
 # Experimental results #
 

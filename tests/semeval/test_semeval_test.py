@@ -8,7 +8,7 @@ from unittest import TestCase
 
 sys.path.append("..")
 
-DATA_DIR = "%s/../data/test/semeval_files" % pathlib.Path(__file__).parent.absolute()
+DATA_DIR = "%s/../../data/test/semeval_files" % pathlib.Path(__file__).parent.absolute()
 WORK_DIR = tempfile.mkdtemp()
 
 
