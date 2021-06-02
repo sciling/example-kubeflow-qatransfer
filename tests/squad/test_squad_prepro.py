@@ -61,7 +61,7 @@ def download_dataset():
 
 
 class TestAll(unittest.TestCase):
-    def test_prepro(self):
+    def test_preprospan(self):
         from src.squad.prepro import prepro_basic
 
         download_dataset()
@@ -92,6 +92,50 @@ class TestAll(unittest.TestCase):
         self.assertIn("shared_dev.json", os.listdir(squad_path + "/squad"))
         self.assertIn("shared_test.json", os.listdir(squad_path + "/squad"))
         self.assertIn("shared_train.json", os.listdir(squad_path + "/squad"))
+
+    def test_convert2class(self):
+        from src.squad.prepro import convert2class
+
+        download_dataset()
+        class_dir = tempfile.mkdtemp()
+        convert2class(WORK_DIR, class_dir)
+
+        self.assertIn("data", os.listdir(class_dir))
+        self.assertIn("squad-class", os.listdir(class_dir + "/data"))
+        self.assertIn("train-v1.1.json", os.listdir(class_dir + "/data/squad-class"))
+        self.assertIn("dev-v1.1.json", os.listdir(class_dir + "/data/squad-class"))
+
+    def test_preproclass(self):
+        from src.squad.prepro import prepro_class
+
+        download_dataset()
+        squad_path = tempfile.mkdtemp()
+        dataset_path = WORK_DIR
+        train_ratio = 0.9
+        glove_vec_size = 100
+        mode = "full"
+        tokenizer = "PTB"
+        url = "vision-server2.corp.ai2"
+        port = 8000
+        prepro_class(
+            dataset_path,
+            DATA_DIR,
+            train_ratio,
+            glove_vec_size,
+            mode,
+            tokenizer,
+            url,
+            port,
+            squad_path,
+        )
+
+        # Check model directory has all files
+        self.assertIn("data_dev.json", os.listdir(squad_path + "/squad-class"))
+        self.assertIn("data_test.json", os.listdir(squad_path + "/squad-class"))
+        self.assertIn("data_train.json", os.listdir(squad_path + "/squad-class"))
+        self.assertIn("shared_dev.json", os.listdir(squad_path + "/squad-class"))
+        self.assertIn("shared_test.json", os.listdir(squad_path + "/squad-class"))
+        self.assertIn("shared_train.json", os.listdir(squad_path + "/squad-class"))
 
 
 if __name__ == "__main__":

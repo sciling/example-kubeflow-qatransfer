@@ -23,12 +23,15 @@ def qa_pipeline(
     train_batch_size: int = 60,
     train_hidden_size: int = 100,
     train_var_decay: float = 0.999,
+    training_mode: str = "span",
 ):
     # Creating containers from python functions
     from test import test
 
     from download import download
+    from prepro import convert2class
     from prepro import prepro_basic
+    from prepro import prepro_class
     from train import train
 
     download_op = func_to_container_op(
@@ -42,6 +45,20 @@ def qa_pipeline(
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer",
             "psutil",
+        ],
+    )
+    squad_convert2class_op = func_to_container_op(
+        convert2class,
+        base_image="sciling/tensorflow:0.12.0-py3",
+        packages_to_install=[
+            "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
+        ],
+    )
+    squad_prepro_class_op = func_to_container_op(
+        prepro_class,
+        base_image="sciling/tensorflow:0.12.0-py3",
+        packages_to_install=[
+            "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     squad_span_pretrain_op = func_to_container_op(
@@ -61,42 +78,86 @@ def qa_pipeline(
     )
 
     dataset_path = download_op()
-    prepro_span = squad_preprocess_op(
-        dataset_path.output,
-        prepro_train_ratio,
-        prepro_glove_vec_size,
-        prepro_mode,
-        prepro_tokenizer,
-        prepro_url,
-        prepro_port,
-    )
-    model = squad_span_pretrain_op(
-        prepro_span.output,
-        train_sent_size_th,
-        train_ques_size_th,
-        train_num_epochs,
-        train_num_steps,
-        train_eval_period,
-        train_save_period,
-        train_learning_rate,
-        train_batch_size,
-        train_hidden_size,
-        train_var_decay,
-    ).set_memory_request("4G")
-    squad_test_op(
-        prepro_span.output,
-        model.output,
-        train_sent_size_th,
-        train_ques_size_th,
-        train_num_epochs,
-        train_num_steps,
-        train_eval_period,
-        train_save_period,
-        train_learning_rate,
-        train_batch_size,
-        train_hidden_size,
-        train_var_decay,
-    )
+    with dsl.Condition(training_mode == "span"):
+        prepro_span = squad_preprocess_op(
+            dataset_path.output,
+            prepro_train_ratio,
+            prepro_glove_vec_size,
+            prepro_mode,
+            prepro_tokenizer,
+            prepro_url,
+            prepro_port,
+        )
+        model = squad_span_pretrain_op(
+            prepro_span.output,
+            train_sent_size_th,
+            train_ques_size_th,
+            train_num_epochs,
+            train_num_steps,
+            train_eval_period,
+            train_save_period,
+            train_learning_rate,
+            train_batch_size,
+            train_hidden_size,
+            train_var_decay,
+            training_mode,
+        ).set_memory_request("4G")
+        squad_test_op(
+            prepro_span.output,
+            model.output,
+            train_sent_size_th,
+            train_ques_size_th,
+            train_num_epochs,
+            train_num_steps,
+            train_eval_period,
+            train_save_period,
+            train_learning_rate,
+            train_batch_size,
+            train_hidden_size,
+            train_var_decay,
+            training_mode,
+        )
+    with dsl.Condition(training_mode == "class"):
+        classes = squad_convert2class_op(dataset_path.output)
+        prepro_class = squad_prepro_class_op(
+            dataset_path.output,
+            classes.output,
+            prepro_train_ratio,
+            prepro_glove_vec_size,
+            prepro_mode,
+            prepro_tokenizer,
+            prepro_url,
+            prepro_port,
+        )
+        model = squad_span_pretrain_op(
+            prepro_class.output,
+            train_sent_size_th,
+            train_ques_size_th,
+            train_num_epochs,
+            train_num_steps,
+            train_eval_period,
+            train_save_period,
+            train_learning_rate,
+            train_batch_size,
+            train_hidden_size,
+            train_var_decay,
+            training_mode,
+        ).set_memory_request("4G")
+        squad_test_op(
+            prepro_class.output,
+            model.output,
+            train_sent_size_th,
+            train_ques_size_th,
+            train_num_epochs,
+            train_num_steps,
+            train_eval_period,
+            train_save_period,
+            train_learning_rate,
+            train_batch_size,
+            train_hidden_size,
+            train_var_decay,
+            training_mode,
+        )
 
 
 if __name__ == "__main__":
