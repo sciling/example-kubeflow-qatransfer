@@ -127,7 +127,7 @@ If instead of span, we put class as training:mode, leaving the rest of the param
 
 |Accuracy| Loss |
 |-----|------|
-|0.804|0.666 |
+|0.549|0.692|
 
 The original results are shown in. In particular, we show the accuracy achived in ["Question Answering through Transfer Learning from Large Fine-grained Supervision Data](https://www.aclweb.org/anthology/P17-2081.pdf) and the F1 score achieved in [Bi-directional Attention Flow](https://arxiv.org/pdf/1611.01603.pdf):
 
