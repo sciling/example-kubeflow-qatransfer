@@ -1,5 +1,13 @@
-from kfp.components import InputPath
-from kfp.components import OutputPath
+try:
+    from kfp.components import InputPath
+    from kfp.components import OutputPath
+except ImportError:
+
+    def InputPath(c):
+        return c
+
+    def OutputPath(c):
+        return c
 
 
 def wikiqa_train(

@@ -52,13 +52,10 @@ To generate the pipeline from the python file, execute the following command:
 pipeline.py is located inside src folder. The pipeline will be created at the same directory that the command is executed.
 
 Also, if you want to run all tests locally, execute:
-```python3 -m unittest tests/*_test.py```
+```./run_semeval_tests.sh  ```
 
 Once the pipeline has been created, we can upload the generated zip file in kubeflow UI and create runs of it.
 
-# Testing #
-In order to perform several tests, please place yourself at the root of this project and execute:
-```./run_semeval_tests.sh  ```
 
 # Experimental results #
 

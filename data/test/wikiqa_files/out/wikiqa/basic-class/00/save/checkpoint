@@ -1,0 +1,2 @@
+model_checkpoint_path: "/tmp/qa/tests/wikiqa/../../data/test/wikiqa_files/out/wikiqa/basic-class/00/save/basic-class-2"
+all_model_checkpoint_paths: "/tmp/qa/tests/wikiqa/../../data/test/wikiqa_files/out/wikiqa/basic-class/00/save/basic-class-2"
