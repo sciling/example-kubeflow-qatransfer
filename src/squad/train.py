@@ -18,6 +18,10 @@ def train(
     num_steps,
     eval_period,
     save_period,
+    learning_rate,
+    batch_size,
+    hidden_size,
+    var_decay,
     model_dir: OutputPath(str),
 ):
     import tensorflow as tf
@@ -50,5 +54,13 @@ def train(
         eval_period,
         "--save_period",
         save_period,
+        "--init_lr",
+        learning_rate,
+        "--batch_size",
+        batch_size,
+        "--hidden_size",
+        hidden_size,
+        "--var_decay",
+        var_decay,
     ]
     tf.app.run(main, argv)

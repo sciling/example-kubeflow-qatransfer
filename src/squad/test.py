@@ -10,6 +10,9 @@ except ImportError:
         return c
 
 
+metrics = "Metrics"
+
+
 def test(
     prepro_dir: InputPath(str),
     prev_model_dir: InputPath(str),
@@ -19,7 +22,11 @@ def test(
     num_steps,
     eval_period,
     save_period,
-    metrics_path: OutputPath(str),
+    learning_rate,
+    batch_size,
+    hidden_size,
+    var_decay,
+    mlpipeline_metrics_path: OutputPath(metrics),
     model_dir: OutputPath(str),
 ):
 
@@ -85,7 +92,7 @@ def test(
     flags.DEFINE_string("test_name", "dev", "using test or dev?")
 
     # Training / test parameters
-    flags.DEFINE_integer("batch_size", 60, "Batch size [60]")
+    flags.DEFINE_integer("batch_size", int(batch_size), "Batch size [60]")
     flags.DEFINE_integer("val_num_batches", 100, "validation num batches [100]")
     flags.DEFINE_integer("test_num_batches", 0, "test num batches [0]")
     flags.DEFINE_integer(
@@ -93,7 +100,7 @@ def test(
     )
     flags.DEFINE_integer("num_steps", int(num_steps), "Number of steps [20000]")
     flags.DEFINE_integer("load_step", 0, "load step [0]")
-    flags.DEFINE_float("init_lr", 0.5, "Initial learning rate [0.5]")
+    flags.DEFINE_float("init_lr", float(learning_rate), "Initial learning rate [0.5]")
     flags.DEFINE_float(
         "input_keep_prob", 0.8, "Input keep prob for the dropout of LSTM weights [0.8]"
     )
@@ -101,7 +108,7 @@ def test(
         "keep_prob", 0.8, "Keep prob for the dropout of Char-CNN weights [0.8]"
     )
     flags.DEFINE_float("wd", 0.0, "L2 weight decay for regularization [0.0]")
-    flags.DEFINE_integer("hidden_size", 100, "Hidden size [100]")
+    flags.DEFINE_integer("hidden_size", int(hidden_size), "Hidden size [100]")
     flags.DEFINE_integer("char_out_size", 100, "char-level word embedding size [100]")
     flags.DEFINE_integer("char_emb_size", 8, "Char emb size [8]")
     flags.DEFINE_string(
@@ -122,7 +129,9 @@ def test(
         "Share pre-processing (phrase-level) LSTM weights [True]",
     )
     flags.DEFINE_float(
-        "var_decay", 0.999, "Exponential moving average decay for variables [0.999]"
+        "var_decay",
+        float(var_decay),
+        "Exponential moving average decay for variables [0.999]",
     )
     flags.DEFINE_string("classifier", "maxpool", "[maxpool, sumpool, default]")
 
@@ -202,7 +211,7 @@ def test(
         }
         import json
 
-        with open(metrics_path, "w") as f:
+        with open(mlpipeline_metrics_path, "w") as f:
             json.dump(metrics, f)
 
     tf.app.run(main)

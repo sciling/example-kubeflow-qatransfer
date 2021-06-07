@@ -17,6 +17,36 @@ The aim of this pipeline is to train an expert model of question answering with 
 |train_num_steps| Number of steps to train the model (e.g '55')|
 |train_eval_period| Period to perform evaluation on train (e.g '50')|
 |train_save_period| Period to perform save on train (e.g '10').|
+|train_learning_rate| Float representing the learning rate (e.g 0.5)|
+|train_batch_size| Integer representing the size of the bacth (e.g 60)|
+|train_hidden_size| Integer representing the hidden size (e.g 100)|
+|train_var_decay| Integer representing the exponential decay (e.g 0.999)|
+
+# Default parameters #
+Taking into account the following text extracted from [BI-DIRECTIONAL ATTENTION FLOW
+FOR MACHINE COMPREHENSION]( https://arxiv.org/pdf/1611.01603.pdf#page=6),
+
+![pipeline.png](./data/images/paper_snippet.png)
+
+we have defined default parameters as optimal ones:
+| Pipeline parameter | Description |
+| ------ | ------ |
+|prepro_train_ratio| 0.9 |
+|prepro_glove_vec_size| 100 |
+|prepro_mode| "full"|
+|prepro_tokenizer| "PTB" |
+|prepro_url| "vision-server2.corp.ai2"|
+|prepro_port| 8000 |
+|train_sent_size_th| 500 |
+|train_ques_size_th| 30 |
+|train_num_epochs| 12|
+|train_num_steps| 20000 |
+|train_eval_period| 500 |
+|train_save_period| 500 |
+|train_learning_rate| 0.5|
+|train_batch_size| 60|
+|train_hidden_size| 100|
+|train_var_decay| 0.999|
 
 # Pipeline stages #
 
@@ -32,10 +62,7 @@ This component preprocess the squad dataset and save generated files inside an O
 This component trains the squad dataset taken into account squad preprocess generated files and save generated model inside an OutputPath Artifact.
 
 ##### 4. Test ([code](./src/squad/test.py))
-This component generated tested the model and saved some metrics in an OutputPath Artifact.
-
-##### 5. Metric generator ([code](./src/squad/generate_metrics.py))
-This component creates a metric that the kubeflow UI can understand in order to visualize the accuracy and f1-score of the trained model.
+This component generated tested the model and creates a metric that the kubeflow UI can understand in order to visualize the accuracy and f1-score of the trained model.
 
 # File generation #
 To generate the pipeline from the python file, execute the following command:

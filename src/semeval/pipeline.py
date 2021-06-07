@@ -21,7 +21,7 @@ def qa_pipeline(
     test_eval_period: int = 200,
     test_threshold: float = 0.5,
     test_th: int = 10,
-    test_reranking_th: int = None,
+    test_reranking_th: int = 10,
     test_format: str = "trec",
     test_verbose: bool = False,
     test_ignore_noanswer: bool = False,
