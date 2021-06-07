@@ -27,6 +27,7 @@ class TestAll(unittest.TestCase):
         batch_size = "60"
         hidden_size = "100"
         var_decay = "0.999"
+        training_mode = "span"
         model_path = tempfile.mkdtemp()
         try:
             from multiprocessing import Process
@@ -43,6 +44,7 @@ class TestAll(unittest.TestCase):
                 batch_size,
                 hidden_size,
                 var_decay,
+                training_mode,
                 model_path,
             )
             p = Process(target=train, args=args)

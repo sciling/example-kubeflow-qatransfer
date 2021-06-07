@@ -29,6 +29,7 @@ class TestAll(unittest.TestCase):
         batch_size = "60"
         hidden_size = "100"
         var_decay = "0.999"
+        training_mode = "span"
         mlpipeline_metrics_path = tempfile.NamedTemporaryFile()
         model_dir = tempfile.mkdtemp()
         try:
@@ -47,6 +48,7 @@ class TestAll(unittest.TestCase):
                 batch_size,
                 hidden_size,
                 var_decay,
+                training_mode,
                 mlpipeline_metrics_path.name,
                 model_dir,
             )
