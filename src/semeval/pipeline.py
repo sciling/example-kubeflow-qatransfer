@@ -114,4 +114,4 @@ def qa_pipeline(
 
 if __name__ == "__main__":
     # Compile pipeline to generate compressed YAML definition of the pipeline.
-    kfp.compiler.Compiler().compile(qa_pipeline, "{}.zip".format("qa_pipeline"))
+    kfp.compiler.Compiler().compile(qa_pipeline, "{}.zip".format("semeval_pipeline"))

@@ -1,0 +1,5 @@
+requests
+tqdm
+nltk
+xmltodict
+https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer

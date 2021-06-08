@@ -26,6 +26,7 @@ def test(
     batch_size,
     hidden_size,
     var_decay,
+    training_mode,
     mlpipeline_metrics_path: OutputPath(metrics),
     model_dir: OutputPath(str),
 ):
@@ -39,8 +40,12 @@ def test(
     dst = model_dir + "/out/squad"
     shutil.copytree(src, dst)
 
-    model_name = "basic"
-    data_dir = prepro_dir + "/squad"
+    model_name = "basic" if training_mode == "span" else "basic-class"
+    data_dir = (
+        prepro_dir + "/squad"
+        if training_mode == "span"
+        else prepro_dir + "/squad-class"
+    )
     output_dir = model_dir + "/out/squad"
 
     flags = tf.app.flags
@@ -195,20 +200,37 @@ def test(
         evaluator = m(config)
 
         """Generating metrics for the squad model"""
-        metrics = {
-            "metrics": [
-                {
-                    "name": "accuracy-score",
-                    "numberValue": str(evaluator.acc),
-                    "format": "RAW",
-                },
-                {
-                    "name": "f1-score",
-                    "numberValue": str(evaluator.f1),
-                    "format": "RAW",
-                },
-            ]
-        }
+        if training_mode == "span":
+            metrics = {
+                "metrics": [
+                    {
+                        "name": "accuracy-score",
+                        "numberValue": str(evaluator.acc),
+                        "format": "RAW",
+                    },
+                    {
+                        "name": "f1-score",
+                        "numberValue": str(evaluator.f1),
+                        "format": "RAW",
+                    },
+                ]
+            }
+        else:
+            metrics = {
+                "metrics": [
+                    {
+                        "name": "accuracy-score",
+                        "numberValue": str(evaluator.acc),
+                        "format": "RAW",
+                    },
+                    {
+                        "name": "loss",
+                        "numberValue": str(evaluator.loss),
+                        "format": "RAW",
+                    },
+                ]
+            }
+
         import json
 
         with open(mlpipeline_metrics_path, "w") as f:
