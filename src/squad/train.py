@@ -22,14 +22,19 @@ def train(
     batch_size,
     hidden_size,
     var_decay,
+    training_mode,
     model_dir: OutputPath(str),
 ):
     import tensorflow as tf
 
     from basic.cli import main
 
-    model_name = "basic"
-    data_dir = prepro_dir + "/squad"
+    model_name = "basic" if training_mode == "span" else "basic-class"
+    data_dir = (
+        prepro_dir + "/squad"
+        if training_mode == "span"
+        else prepro_dir + "/squad-class"
+    )
     output_dir = model_dir + "/out/squad"
     argv = [
         "./basic/cli.py",

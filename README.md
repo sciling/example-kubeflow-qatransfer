@@ -12,4 +12,8 @@ Bare in mind that, for the pre-trained models to be used in other pipelines, the
 
 ## Semeval pipeline ([README](SEMEVAL_README.md))
 The aim of this pipeline is to train a model of question answering with the semeval dataset with a technique called Transfer Learning.
-This technique will use the squad model previously trained in order to get better semeval model results.
+This technique will use the squad model previously trained in order to get better semeval model results. This pipeline preprocesses the data in span, so the provided squad model should also be trained with the parameter training_mode set to 'span'.
+
+## WikiQA pipeline ([README](WIKIQA_README.md))
+The aim of this pipeline is to train a model of question answering with the wikipedia question answering(wikiqa) dataset with a technique called Transfer Learning.
+This technique will use the squad model previously trained in order to get better wikiqa model results. This pipeline preprocesses the data in classes, so the provided squad model should also be trained with the parameter training_mode set to 'class'.
