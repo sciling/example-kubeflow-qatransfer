@@ -5,7 +5,7 @@ pre-commit:
 	poetry run pre-commit install
 
 install: finalize
-	pip install -r requirements.txt
+	poetry install
 
 tests: install
-	./run_semeval_tests.sh
+	poetry run coverage run -m pytest -p no:sugar -s -q tests/
