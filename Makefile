@@ -1,11 +1,11 @@
 finalize:
-	poetry update
+	echo 'Does not have finalize'
 
 pre-commit:
-	poetry run pre-commit install
+	echo 'Does not have pre-commit'
 
 install: finalize
-	poetry install
+	pip install -r requirements.txt
 
 tests: install
-	poetry run coverage run -m pytest -p no:sugar -s -q tests/
+	python -m unittest $PWD/tests/semeval/test_semeval_{prepro,train,generate_files,test}.py
