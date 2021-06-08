@@ -204,5 +204,3 @@ def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str), 
 
     args = get_args()
     prepro(args)
-
-    print(os.listdir(semeval_path + "/semeval"))

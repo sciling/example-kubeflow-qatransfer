@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml [
+<!ELEMENT xml (Thread*)>
+<!ATTLIST xml
+version CDATA #REQUIRED
+>
+<!ELEMENT Thread (RelQuestion, RelComment*)>
+<!ATTLIST Thread
+ THREAD_SEQUENCE CDATA #REQUIRED
+>
+<!ELEMENT RelQuestion (RelQSubject, RelQBody)>
+<!ATTLIST RelQuestion
+RELQ_ID CDATA #REQUIRED
+RELQ_CATEGORY CDATA #REQUIRED
+RELQ_DATE CDATA #REQUIRED
+RELQ_USERID CDATA #REQUIRED
+RELQ_USERNAME CDATA #REQUIRED
+>
+<!ELEMENT RelQSubject (#PCDATA)>
+<!ELEMENT RelQBody (#PCDATA)>
+<!ELEMENT RelComment (RelCText)>
+<!ATTLIST RelComment
+RELC_ID CDATA #REQUIRED
+RELC_DATE CDATA #REQUIRED
+RELC_USERID CDATA #REQUIRED
+RELC_USERNAME CDATA #REQUIRED
+RELC_RELEVANCE2RELQ CDATA #REQUIRED
+>
+<!ELEMENT RelCText (#PCDATA)>
+]>
+<xml version="1.0">
+
+	<Thread THREAD_SEQUENCE="Q201_R26">
+		<RelQuestion RELQ_ID="Q201_R26" RELQ_CATEGORY="Working in Qatar" RELQ_DATE="2015-01-07 10:00:25" RELQ_USERID="U4433" RELQ_USERNAME="komail">
+			<RelQSubject>Salary vs Cost of Living Doha</RelQSubject>
+			<RelQBody>Family with 2 kids (9 &amp; 5 years old) - both school going Salary package of 20K (with no other benefit) Is it a good deal?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q201_R26_C1" RELC_DATE="2015-01-07 10:31:45" RELC_USERID="U4434" RELC_USERNAME="aamirjaved" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>For family with 2 child; you ll probably need 2BR flat which will cost about 7000-8000 and for schooling you ll probably need 4000-5000. so it means these two will take major chunk of your salary. Further you can take 3000 monthly living expense and 2000 for conveyance. Additionally any medical requirements. Now its upto you to decide...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C2" RELC_DATE="2015-01-07 10:43:17" RELC_USERID="U640" RELC_USERNAME="acchabaccha" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Aamirjaved's calculation is somewhat on the high side. I believe you should be able to get a 2BR within QR 5000 and also you can easily manage your monthly expenses within QR 2000. For the schooling; if you are an Asian; it is not that costly to my understanding. As such; my view is that if you are an Asian; grab the offer; but if you are a westerner; kick it.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C3" RELC_DATE="2015-01-07 10:44:34" RELC_USERID="U4435" RELC_USERNAME="arkb" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>We can't say if it's a good deal - you don't include details of the role. Try to get schooling included in the package. Agree with aamirjaved. Depends on what standard of living you want. Depending on area; you may need 10k+ for a nice 2 bed.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C4" RELC_DATE="2015-01-07 10:49:36" RELC_USERID="U4436" RELC_USERNAME="Viswakumar" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Agree with aamirjaved.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C5" RELC_DATE="2015-01-07 11:19:50" RELC_USERID="U4437" RELC_USERNAME="BISHWANATH2014" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>EZDAN 2 bedroom Fully Furnished you get in QR 5500; School Asian with Transportation for 2 kids 750 x2 = 1500 and QR 3000 living expense and QR 1000 miscellaneous. So Net Savings QR 9000 as of my 10 years experience in Doha living with Family.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C6" RELC_DATE="2015-01-07 11:55:01" RELC_USERID="U4438" RELC_USERNAME="mido-doha" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>no enough for the near future as Qatar is getting more expensive not yearly! you can feel it every 4-5 months.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C7" RELC_DATE="2015-01-07 11:58:07" RELC_USERID="U4439" RELC_USERNAME="krohit_in" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>I will suggest to go for unfurnished property; it will cost you around QR 4000-4800 depends on locality; Asian school with transportation for two kids 1000 X2= QR 2000; QR 2000 for living expense and QR 500 for transport; Total cost of living would be QR 8500 - 9300; You can save QR +10500; But it totally depends on your living standard.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C8" RELC_DATE="2015-01-07 12:08:47" RELC_USERID="U4440" RELC_USERNAME="Hamidpipi1" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>1.2BHK - QR 5000/PM 2.Furniture Allowance Incl All house hold items (For one time = QR 14000 - 16000) for two bed room flat. Schooling for tow kids incl transport (Asian) = QR 1800 3.Net + Phone = QR 600 4. House living Expenses = QR 2500 5. Miscellaneous = QR 1000 if you are from India then the cost of living should be like Allmost the same.....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C9" RELC_DATE="2015-01-07 12:43:13" RELC_USERID="U68" RELC_USERNAME="Mary-vani" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>if you have decided to join this Qatar company; you mus to attested your educational certificate.For attestation &amp; translation purpose please contact to sheenservices wll.. website:http://sheenservices.com/contact-us.html-44366147/55974495</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R26_C10" RELC_DATE="2015-01-07 13:47:59" RELC_USERID="U4124" RELC_USERNAME="yacine.h" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>If you are Asian you should be fine with it. If you are European you wouldn't be fine with it all as the schools and the rent fees will eat up much of it</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q201_R29">
+		<RelQuestion RELQ_ID="Q201_R29" RELQ_CATEGORY="Doha Shopping" RELQ_DATE="2011-01-24 22:32:54" RELQ_USERID="U4441" RELQ_USERNAME="sakib12345">
+			<RelQSubject>Why to DSLR cams cost more in Qatar ?</RelQSubject>
+			<RelQBody>i see that the prices are higher in Qatar on DSLR cams ? why is it? can any one suggest how i can by cheaper online. i dont have any experience buying things online. so i need advices :)</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q201_R29_C1" RELC_DATE="2011-01-24 22:39:19" RELC_USERID="U643" RELC_USERNAME="lamea" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>every thing is expensive here.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C2" RELC_DATE="2011-01-24 22:39:44" RELC_USERID="U578" RELC_USERNAME="flexicode" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>better stay away from online purchases; especially if you want it to be delivered on a qatar address; that too a digicam...DSLR prices are higher in qatar as compared to where?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C3" RELC_DATE="2011-01-24 22:45:42" RELC_USERID="U4441" RELC_USERNAME="sakib12345" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>on amazon.com it says Canon EOS Rebel T1i 15.1 MP CMOS Digital SLR Camera with 3-Inch LCD and EF-S 18-55mm f/3.5-5.6 IS Lens @ $589.99 :|</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C4" RELC_DATE="2011-01-24 22:55:49" RELC_USERID="U4441" RELC_USERNAME="sakib12345" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Canon EOS Rebel T1i (canon 500D) in Qatar is Qr.2998 which is around $821............</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C5" RELC_DATE="2011-01-24 22:55:57" RELC_USERID="U578" RELC_USERNAME="flexicode" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>you can get this for about the same price (around 2000 QR) here as well but you need to check at 3 - 4 places for a comparison. there is an undefinable difference in prices even on major brands here in qatar...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C6" RELC_DATE="2011-01-24 22:59:34" RELC_USERID="U4441" RELC_USERNAME="sakib12345" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i checked lulu &amp; carrefour and the prices i found are Qr.2999 &amp; 2998......... where do i find it @ Qr.2000 here?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C7" RELC_DATE="2011-01-24 23:07:08" RELC_USERID="U4442" RELC_USERNAME="omar1733" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Because there are not too much specialty stores that caters only professional cameras (DSLRs). Mostly camera stores can be found only in malls but they are not specialty stores. You know how mall owners jack-up prices of goods; especially if it comes or imported outside Doha. If you have friends in UAE; you can ask them to buy you one and just shipped it you. Or; there are some people selling DLSRs here in QL. You can search the classified ad here.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C8" RELC_DATE="2011-01-24 23:12:04" RELC_USERID="U4441" RELC_USERNAME="sakib12345" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>omar1733 @ thanx mate...i'll check :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C9" RELC_DATE="2011-01-24 23:13:17" RELC_USERID="U4442" RELC_USERNAME="omar1733" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>You can try Gulf Foto in Musheirib area.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R29_C10" RELC_DATE="2011-01-25 00:52:27" RELC_USERID="U1304" RELC_USERNAME="cdpascual" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>you can try b&amp;h which is a trusted one; they can ship here.OR if you know somebody in US or travelling there you can ask them to buy it for you. that's what i did. my friend had ordered too from some sellers in ebay; mostly D90.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q201_R35">
+		<RelQuestion RELQ_ID="Q201_R35" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2011-07-04 21:01:10" RELQ_USERID="U4443" RELQ_USERNAME="newtodoha2011">
+			<RelQSubject>got a job offer of 12000 QR. whats its worth?</RelQSubject>
+			<RelQBody>Hi; I am working currently in dubai and i hav been offered a job with a salary of 12000 QR (inclusive of basic; hra and transportation). You have to get your own place and car. I would like to know how much a single BHK would cost and also how much utilities bills would come to for a month?how costly is it to have food from restaurants as i do not know how to cook. can some one provide an insight please. Thank you.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q201_R35_C1" RELC_DATE="2011-07-04 21:08:22" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Which company dude??</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C2" RELC_DATE="2011-07-04 21:23:26" RELC_USERID="U4443" RELC_USERNAME="newtodoha2011" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>HI arshad124 ; sorry but i cant reveal the company details...whts ur opinion? is 12k good enough?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C3" RELC_DATE="2011-07-04 21:41:01" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>hmmm; depends on which company you know : /</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C4" RELC_DATE="2011-07-04 21:42:00" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Seriously message me the company atleast....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C5" RELC_DATE="2011-07-04 21:42:30" RELC_USERID="U74" RELC_USERNAME="FlyingAce" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Firstly it depends on your Life Style; and then If you are getting more then 12000QAR; in Dubai then better off to stay there... The desicion is all yours...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C6" RELC_DATE="2011-07-04 21:47:49" RELC_USERID="U4444" RELC_USERNAME="qatartalks" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>well the salary seem to be good; but if you are bring your family then house of 2BK without furnish and good lcoation would not cost you less then 4000 qr. then furnuiture and basic requirement that shall shoot upto 10K. So indirect 5k per month would be the rent. then car if you go for high end car apprx starting from 100000 to 123000 then monthy EMI would be between 4000 to 4500. then food and other expensies..Now it is totallly depend on how you spend it dude. According to me it good salary. But spend wisely and save for your further.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C7" RELC_DATE="2011-07-04 21:54:08" RELC_USERID="U4443" RELC_USERNAME="newtodoha2011" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>@ arshad124 mate sorry again but i cant mention it....and whts the company name got to do with this salary? @flyingace: i make arround 9K here in dubai...this job pays more but i hav heard its quite costly there...my lifesytle is more or less simple. i pa</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C8" RELC_DATE="2011-07-04 22:00:42" RELC_USERID="U4443" RELC_USERNAME="newtodoha2011" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>hi qatartalks ; well i am a bachelor for now and no plan to get married soon.also i plan to export my car from dubai to doha...how much does a decent studio cost at wakrah? savings is important to me and also i will need tht for a future family life..so with 12k salary would like to calculate wht my expenses would be...thanx for the support...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C9" RELC_DATE="2011-07-04 22:02:43" RELC_USERID="U4445" RELC_USERNAME="zuzo" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>not worth the change for just 3000 extra. nothing compared to Dubai... here things are not that economical as opposed to the thought... i was in Dubai.. and i believe that Dubai is now much better; as compared to what it used to be.. but again.. compare the prospects when u change the job; what are the growth prospects... keep bear in mind.. the cost of living is going to increase... and rate of inflation will be much higher than dubai..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R35_C10" RELC_DATE="2011-07-04 22:08:52" RELC_USERID="U4443" RELC_USERNAME="newtodoha2011" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>HI zuzo; well the growth prospects later on for me would be better. as of now i am changing my line of work..if i set a target of 2 years in doha and then head back to dubai then i myt have a better growth when i get back here...thank u for that honest comment...i still have 2 weeks to decide. Dubai is good; but chances of landing in a good job is less now.i have been here for 3 years and the market is not good as it used to be...but inflation in qatar i agree myt be higher..if i was aiming at just 2 years; whts your opinion?</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q201_R41">
+		<RelQuestion RELQ_ID="Q201_R41" RELQ_CATEGORY="Salary and Allowances" RELQ_DATE="2011-05-25 06:09:00" RELQ_USERID="U4446" RELQ_USERNAME="bioless">
+			<RelQSubject>Is 30000 QAR good enough salary for a couple to move to Qatar?</RelQSubject>
+			<RelQBody>Moving to Qatar soon; have received an offer of QAR 30K; is that good enough for a couple to be in Qatar? We have No kids.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q201_R41_C1" RELC_DATE="2011-05-25 06:42:55" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>That's good offer...Welcome to Qatar...:-)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C2" RELC_DATE="2011-05-25 06:46:05" RELC_USERID="U308" RELC_USERNAME="tryke" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I am receiving less than that and i have moved to Qatar with wife and 3 kids and yet somehow we managed to survive... Surely 30K QR will be more than good enough for you and your wife to live and enjoy life in Doha...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C3" RELC_DATE="2011-05-25 06:49:26" RELC_USERID="U308" RELC_USERNAME="tryke" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I am receiving less than that and i have moved to Qatar with my wife and 3 kids and yet somehow we managed to survive... Surely 30K QR will be more than good enough for you and your wife to live and enjoy life in Doha...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C4" RELC_DATE="2011-05-25 07:18:31" RELC_USERID="U134" RELC_USERNAME="timebandit" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Oh come on... are you stupid or what. That is good money and you know it. If you can't figure out if that is a good enough salary then you don't deserve that amount.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C5" RELC_DATE="2011-05-25 07:20:49" RELC_USERID="U4238" RELC_USERNAME="samiko" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It depends on your living standard and expectation for savings. In this connection it is important to know do all allowances (specialy accomodation allowance) are included or not in this amount. For example rent of a villa will be in the range of 12;000 - 20;000 QR etc. Good Luck</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C6" RELC_DATE="2011-05-25 07:26:39" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>DO YOU THINK THAT YOU WILL EARN THAT AMOUNT IN YOUR COUNTRY????CMON......AND HOW COME A LOT OF EXPATS ARE COMING TO WORK INSTEAD IN THEIR HOME COUNTRY?????DONT BE SO SILLY....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C7" RELC_DATE="2011-05-25 07:28:24" RELC_USERID="U4447" RELC_USERNAME="Al-Khor" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>it depends if it is excluding the accomodation or including because if you want to live in a villa you need something like 10000 QR monthly and if it it is included then you will end up with 20000 which is enough to live a meduam life for you and your family To be honst i think it is a good salary for an engineer or maybe senior person so go a head and good luck</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C8" RELC_DATE="2011-05-25 07:33:33" RELC_USERID="U561" RELC_USERNAME="bral1960" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Depend which one is your life-style? Is the accommodation paid by Company? and the car (3000 for rent)? Do you like compound villa (12000) or apartment (7000)? Do you like club (500 per month)? Do you like drink alcohol (500 per month)? Do you like go to restaurant (700 per month)? Your wife like new clothes (1000 per month)? QR 30.000 are not enough for western couple!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C9" RELC_DATE="2011-05-25 08:28:04" RELC_USERID="U1178" RELC_USERNAME="wbaylagoon" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>if it's not at least 3X what you are earning in your home country then I think that would not be enough just my two cents</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q201_R41_C10" RELC_DATE="2011-05-25 08:53:46" RELC_USERID="U4448" RELC_USERNAME="aja91" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>For a Manager from UK; It is reasonable. Not too good. You need QR6500(2 BR Appartment with out Gym&amp;swimming pool)- 14000( 4BR compound villa with swimming pool; Gym etc) for Accomodation 2300 for Car; 300 for Petrol. 2500 for food(if you cook) 2000 for week end outing; 1500 for child education. All togeter Around QR15000 will go as minimum expense. If you are blessed with free accommodation; this salary is very good.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q202_R11">
+		<RelQuestion RELQ_ID="Q202_R11" RELQ_CATEGORY="Advice and Help" RELQ_DATE="2011-05-16 20:57:15" RELQ_USERID="U4449" RELQ_USERNAME="tonyhanna1">
+			<RelQSubject>TRAFFIC TICKET RULES</RelQSubject>
+			<RelQBody>HI ALL; THINK I AM IN TROUBLE; WHILE PASSING A FLASHING GREEN LIGHT I KIND OF THOUGHT THE RADAR TOOK A PIC OF ME.. EVERYBODY IS TELLING ME THAT THE TICKET IS ONLY FOR RED LIGHT PASSING CAN ANYONE HELP?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q202_R11_C1" RELC_DATE="2011-05-16 21:04:20" RELC_USERID="U1048" RELC_USERNAME="bea_7" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>no ticket for crossing over a flashing green light - technically it's still green and flashing is just a warning that it'll turn red the flashing you think you saw is probably the guy behind you flashing you to drive faster or get out of the way :o)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C2" RELC_DATE="2011-05-16 21:27:31" RELC_USERID="U4450" RELC_USERNAME="Jorjetka" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Speed cameras are installed on traffic intersections. Flashing green - you put your fut down and bang: 500QR if you are lucky. I crossed Ramada signal on flashing green at 2am doing about 90km/h. Result 600QR and 4 points. Be careful mate.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C3" RELC_DATE="2011-05-16 21:46:51" RELC_USERID="U4449" RELC_USERNAME="tonyhanna1" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Man; I swear it had just started blinking; and Jorjetka; I rented a f***ing SEAT IBIZA; it takes like 10 min to get from 0 to 80 so I was max 60 km/h fast; hope u r both right and i get away with it...will keep u posted</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C4" RELC_DATE="2011-05-16 23:08:47" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It's very simple mate;if the light was green;flashing green or even orange when you passed &amp; you saw the camera flash;you were doing over 80 kmph...check online in about 2 days &amp; you'll know for sure either way...good luck!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C5" RELC_DATE="2011-05-16 23:09:48" RELC_USERID="U4451" RELC_USERNAME="akifssa" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>how much is the relaxation in the speed limits set on the Radarshere in Qatar? As in Dubai you can generally go 20Km/h over the displayed speed limit... Sheikh Zayed Road is an exception where you can drive upto 160Km/h where as the speed limit is displayed at 120Km/h... Waiting for your comments...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C6" RELC_DATE="2011-05-16 23:29:55" RELC_USERID="U11" RELC_USERNAME="roy_dig" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Here 80 means 80; no relaxation.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C7" RELC_DATE="2011-05-17 06:31:17" RELC_USERID="U2668" RELC_USERNAME="mr_qatar" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>You guys are still lucky that you ppl drive your cars @ 80KM or sometime 100 - 120Km.. here in Australia the maximum speed is 70KM even in highways its not more then 80......which is such a bull s***...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C8" RELC_DATE="2011-05-17 09:28:11" RELC_USERID="U861" RELC_USERNAME="xxc" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>if you have smiled to the camera; they will let u pay a 100QR only. but since u did not that must be serious :P</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C9" RELC_DATE="2011-05-20 16:58:17" RELC_USERID="U1048" RELC_USERNAME="bea_7" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>speeding and crossing red lights are two different things pple! if you were at a right speed and only crossed on flashing green - it's fine. I've done it so many times that if I was to get a fine; I'd be out of business by now :o)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R11_C10" RELC_DATE="2011-05-20 19:33:26" RELC_USERID="U4449" RELC_USERNAME="tonyhanna1" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Hey; Checked on the website; nothing there yet; supposedly I must have been caught on Monday. Any chance I'd still have a ticket after 4 days?</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q202_R17">
+		<RelQuestion RELQ_ID="Q202_R17" RELQ_CATEGORY="Qatar Living Lounge" RELQ_DATE="2008-06-29 17:37:34" RELQ_USERID="U3327" RELQ_USERNAME="dhanurath">
+			<RelQSubject>Crossing Red Signals on Doha Road</RelQSubject>
+			<RelQBody>Why people are crossing red signals on Doha Roads? I think signals are changing quickly than on Dubai roads and its hard for the motorists to control their vehicles? Moreover; motorists are bit panic fearing the penalties as per the new traffic law.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q202_R17_C1" RELC_DATE="2008-06-29 17:41:33" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>This is a big problem which needs to be addressed by Authorities real soon :(</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C2" RELC_DATE="2008-06-29 17:52:05" RELC_USERID="U4452" RELC_USERNAME="Mayasunil" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Its always a tension. Scary</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C3" RELC_DATE="2008-06-29 18:09:00" RELC_USERID="U210" RELC_USERNAME="DaRuDe" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Dont cross red signal always cross green signal. and never trust the middle one it does get crazy some times. [img_assist|nid=73057|title=.|desc=|link=none|align=left|width=|height=0]</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C4" RELC_DATE="2008-06-29 18:19:46" RELC_USERID="U2327" RELC_USERNAME="lolo123" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>----     LOLO for me i got 6000 qr last week as violation due to this signals--</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C5" RELC_DATE="2008-06-29 18:21:41" RELC_USERID="U4453" RELC_USERNAME="spanky1423" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>this people who cross on red signal are the most idi*ts man i ever seen...do they don't have traffic signals way back in their country...? or the cars in their country run about 10km/hr?..mostly of them are same like us...EXPATS... oooh...how i feel sad about this guys putting their selves in danger in a foreign soil... ROBIN!!!Get the batcar in the BATCAVE!!!http://www.qatarliving.com/user/spanky1423 spanky1423's picture</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C6" RELC_DATE="2008-06-29 22:49:48" RELC_USERID="U475" RELC_USERNAME="spicemom" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i am looking more at the traffic lights than i am at the car in front of me/.....lol life's too short so make the most of it; you only live but once.......</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C7" RELC_DATE="2008-06-29 23:50:56" RELC_USERID="U317" RELC_USERNAME="harsha" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>spicemom.. same here.. after i got a few speeding tickets.. i concentrate more on the lights now.. the worst r near villagio.. the green doesnt even blink..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C8" RELC_DATE="2008-07-01 09:01:33" RELC_USERID="U4452" RELC_USERNAME="Mayasunil" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>They should have a timer showing howmany seconds are left. I have seen it; that its starts from some 30 or so and reduces to zero. So we will knwo exactly how much time is left to cross or wait for the next</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C9" RELC_DATE="2008-07-01 09:13:22" RELC_USERID="U3355" RELC_USERNAME="pykester" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>also i traffic lights here does not have standard options. some have blinking green light; some chage to yellow right away then red. several times alredy i found my self driving in the middle of the crossing in red light luckily at the moment no fines. hehehe :) pykester</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R17_C10" RELC_DATE="2008-07-01 09:50:51" RELC_USERID="U4454" RELC_USERNAME="narmi" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i do agree on the timer aspect;it would really help everyone so that they could adjust their speed accordindly;hope the officials have knowledge on the timer thing and implement it soon......lets wait and see...safe driving ppl!!!</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q202_R20">
+		<RelQuestion RELQ_ID="Q202_R20" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2006-08-11 14:25:23" RELQ_USERID="U2" RELQ_USERNAME="anonymous">
+			<RelQSubject>Traffic Lights</RelQSubject>
+			<RelQBody>OMG; we received two tickets from the Traffic Department; both because we didn&amp;#39;t wait the green light; now we have to pay 3000QR (is always that expensive ???). Never ever again i will do it; even if i have to wait 10 minutes in front of the red light without one car around me; why i didn&amp;#39;t know before about the camera on the lights ??? :(</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q202_R20_C1" RELC_DATE="2006-08-11 15:48:16" RELC_USERID="U556" RELC_USERNAME="e46M3" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Now you know what the colored lights at intersections are for. You can always check your traffic violations at http://www.e.gov.qa/eGovPortal/index.jsp</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C2" RELC_DATE="2006-08-11 17:38:58" RELC_USERID="U1873" RELC_USERNAME="Loki" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>sorry... but that's really funny. Please don't tell which lights it was as I really hope more people get done - that's the only way people will start to actually follow the road rules here - if they are enforced!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C3" RELC_DATE="2006-08-11 18:54:52" RELC_USERID="U4455" RELC_USERNAME="Travel.gate" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>is it 3000 or 300 !! goashhhh ... it is too much; and why u broke the red light? grrrrr sandra r u fast and furious lol</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C4" RELC_DATE="2006-08-11 19:32:52" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I was co-pilot and i just remember one; i really throught that the light was not working; 10 minutes waiting and nothing soooo i told hubby just goooo and now we have to pay 3000 QR for both; is very expensive right !!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C5" RELC_DATE="2006-08-11 20:10:02" RELC_USERID="U421" RELC_USERNAME="doctvm" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>so its you the root cause of ur hubby losing 3000 QR ; i think i have to be very carefull while driving in doha or maybe watch lights and go according to traffic rules and dont listen to wife s opinion to jumb the light ha ha just kidding sandra . so sandra are you scared of the lights now???</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C6" RELC_DATE="2006-08-11 21:12:53" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Not scared about the lights doc; scared about the $$$ !!! We learned the lesson not more jumping :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C7" RELC_DATE="2006-08-11 21:13:42" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Sorry; double post ...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C8" RELC_DATE="2006-08-12 00:05:05" RELC_USERID="U188" RELC_USERNAME="novita77" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>actually u learning the easy way; not the hard way ...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C9" RELC_DATE="2006-08-12 01:46:03" RELC_USERID="U4389" RELC_USERNAME="amr" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Always look around; it's easy to see the cam next to signals. However; 3000K is too much. You need to tell them to reduce that; they would accept; because you're a lady. Speak with them within a nice way; they might reduce it to 500. Becareful next time.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R20_C10" RELC_DATE="2006-08-13 12:14:24" RELC_USERID="U178" RELC_USERNAME="dweller" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>We always assumed that obeying traffic lights was compulsory for expatriates but only advisory for nationals. Always check both ways before crossing any junction..... green light or not!</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q202_R37">
+		<RelQuestion RELQ_ID="Q202_R37" RELQ_CATEGORY="Qatar Living Lounge" RELQ_DATE="2012-02-26 16:13:41" RELQ_USERID="U573" RELQ_USERNAME="Missteacher">
+			<RelQSubject>Driving in Qatar</RelQSubject>
+			<RelQBody>Is it just me or does anyone else who drives here end up a complete stressball because of all the reckless drivers on the Qatar roads. Do people actually take driving lessons here?...seriously; I have never seen a learner vehicle. Between lane hopping; no indication and speeding; my blood pressure must be sky high!!</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q202_R37_C1" RELC_DATE="2012-02-26 16:27:51" RELC_USERID="U34" RELC_USERNAME="cherukkan" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>As per your profile you are a member of QL for almost two years and it is strange that you are posting about driving in Qatar now.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C2" RELC_DATE="2012-02-26 16:33:51" RELC_USERID="U573" RELC_USERNAME="Missteacher" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I only started driving here in November.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C3" RELC_DATE="2012-02-26 16:38:26" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>The Gulf; including Qatar; is one of the last resorts for driving like hell. Anywhere else these people would be in jail! Enjoy it while you can. In 20 years this will all be different.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C4" RELC_DATE="2012-02-26 16:44:04" RELC_USERID="U273" RELC_USERNAME="ingeniero" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Few rules while driving in Qatar. 1st Lane = Speed Limit+20 ( Slow down when you see radar) 2nd Lane = Speed Limit+ ( Slow down when you see radar) 3rd Lane = Speed Limit-10 Overtaking is allowed from both sides in some areas; especially when police is not around. while near to Roundabout; decide on which side you have to go; and then select the proper lane.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C5" RELC_DATE="2012-02-26 16:50:37" RELC_USERID="U4456" RELC_USERNAME="Korly" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"MT; you will find driving schools giving their lessons in the areas the company is situated in. They very seldom leave those areas; hence the reason you probably have never seen a ""Learner"" driver. If you live near E-Ring; you will see Gulf Driving School cars all over Thumama and airport road; but never out of that area."</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C6" RELC_DATE="2012-02-26 16:54:20" RELC_USERID="U2522" RELC_USERNAME="max1986" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Did u saw mercedes G55 driving on two wheels now that's crazyy</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C7" RELC_DATE="2012-02-26 16:58:02" RELC_USERID="U4457" RELC_USERNAME="Farhang" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>If you need to drive and survive in Qatar; then you need to be calm on the road. At the end no one is taking the stress but you. That's how I've been driving here since last 20 years :) How you accomplish that is totally upto you. Hopefully we can start a chain reaction with that and then it will really be pleasant for everyone on the road in our time :) Have a nice Day :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C8" RELC_DATE="2012-02-26 16:59:26" RELC_USERID="U65" RELC_USERNAME="Molten Metal" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Mt; you need a lot of practice of moving to right lane because vehicles behind you need to drive ahead !? people need to reach some where; it is you who is causing delay by obstructing the smooth flow of traffic...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C9" RELC_DATE="2012-02-26 17:00:12" RELC_USERID="U30" RELC_USERNAME="Captain_Lost" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>LOL ... MT .. before i comment on the topic.. i like to make a liiiiiiitelle correction here.. the car in the pic you posted has UAE number plate.. not Qatari.. No biggie anyway :) Yes; there are around 5 - 6 learning schools here.. may be you havent noticed a learner vehicle coz they all are painted fancy.. For the rest of questions.. Driving in Qatar is more like an art of Self defense... So always drive and stay safe... :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R37_C10" RELC_DATE="2012-02-26 17:24:56" RELC_USERID="U573" RELC_USERNAME="Missteacher" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>@Captain_Lost - I was just looking to put a funny pic of crazy driving and came across this on good old Google. @Molten Metal-What on earth are you on about? I have no clue what you mean? please explain?????? How do you know I need practice going in the r</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q202_R38">
+		<RelQuestion RELQ_ID="Q202_R38" RELQ_CATEGORY="Socialising" RELQ_DATE="2012-01-03 08:59:53" RELQ_USERID="U4458" RELQ_USERNAME="MichaelJJackson">
+			<RelQSubject>MY Car accident with picture</RelQSubject>
+			<RelQBody>Yesterday was driving ; the guy infront of me stopped at the green light for no reason and instead of hitting him in the back directly i swerved to the right; and damaged my car . If i hit him straight ; the airbag would have opened and damaged me since i wasnt wearing a seatbelt! Any idea how much this would cost to fix?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q202_R38_C1" RELC_DATE="2012-01-03 09:06:29" RELC_USERID="U753" RELC_USERNAME="Minoush" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Next time wear a seat belt.....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C2" RELC_DATE="2012-01-03 09:07:17" RELC_USERID="U56" RELC_USERNAME="flor1212" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>but admitting you are not wearing your seatbelt! Lol!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C3" RELC_DATE="2012-01-03 09:08:06" RELC_USERID="U2117" RELC_USERNAME="estekwellek" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Ohhhhhh did any thing happen to you? Any injuries? Yesterdat I visited a garage in industrial area 44; I also was hit from behind when I was in Dubai. This workshop deals with lots of insurance companies and its price is very reasonable. I am not making any advertisement for anyone; I even forgot the name of the garage. However I have the guys tel. no and if you are interested I will give it to you. Try to also check other workshops to compare between price/quality/time to finish the works.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C4" RELC_DATE="2012-01-03 09:11:49" RELC_USERID="U544" RELC_USERNAME="just1s" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Be careful and wise in choosing the garage most of them works for money ONLY they even don't know the meaning of QUALITY.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C5" RELC_DATE="2012-01-03 09:12:20" RELC_USERID="U2117" RELC_USERNAME="estekwellek" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Plus did you get a police report to authorize repairs?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C6" RELC_DATE="2012-01-03 09:12:57" RELC_USERID="U1142" RELC_USERNAME="mariecor" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>flor; i was about to comment the same. lol!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C7" RELC_DATE="2012-01-03 09:13:56" RELC_USERID="U4458" RELC_USERNAME="MichaelJJackson" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Yeah I got a police report to repair. The police said its my fault no matter what ; even if the driver stopped his car and is sleeping at the green light its my fault. Also ; the thing is i have third party insurance ; so i have to pay for my own insurance :( Anyone have an estimate of how much this will cost approximately ?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C8" RELC_DATE="2012-01-03 09:14:18" RELC_USERID="U4458" RELC_USERNAME="MichaelJJackson" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>No injuries to anyone ; thank god ; but i think my neck hurts today. :(</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C9" RELC_DATE="2012-01-03 09:18:40" RELC_USERID="U47" RELC_USERNAME="Chairboy" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>..and unfortunately your wallet will hurt tomorrow!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q202_R38_C10" RELC_DATE="2012-01-03 09:19:38" RELC_USERID="U56" RELC_USERNAME="flor1212" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>better be sure you're ok. Car can easily be replaced or repair but hope no unpleasant injury to you. As to the car; go to your insurance and check their accredited garages and from there; choose or if you have friends here who knows Industrial area; ask them.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q203_R2">
+		<RelQuestion RELQ_ID="Q203_R2" RELQ_CATEGORY="Opportunities" RELQ_DATE="2010-07-02 10:29:55" RELQ_USERID="U4459" RELQ_USERNAME="BarNieco">
+			<RelQSubject>Husband under Wife Sponsorship</RelQSubject>
+			<RelQBody>Hello! I was wondering if it is possible for my husband to find/get a job (with local hire) and stay under my sponsorship so he does not lose the benefits from my job? It doesn't matter what sort of job he has; we just need the extra income. Is this something he is able to do? I know the Qatari laws are always changing.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q203_R2_C1" RELC_DATE="2010-07-02 11:16:53" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Take one rent a car ( Honda accord ;Toyota camry or Chevrolet caprice ) and run for a limousine service with any five star hotel colloboration u can easily earn up to QR: 200 per day ...........</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C2" RELC_DATE="2010-07-02 11:21:53" RELC_USERID="U4459" RELC_USERNAME="BarNieco" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>so he would use our own car? I am a little confused. We are already planning on buying a used Kia from someone we know there. Can he work for a limousine company and use their cars?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C3" RELC_DATE="2010-07-02 11:25:33" RELC_USERID="U77" RELC_USERNAME="qatarisun" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"if he has an RP in Qatar; he can work for the company staying under your sponsorship; if Company agreed. All he will need is a Work Permit (to work without a work permit is illegal). your question ""Is this something he is able to do?"" is rather to your husband; not to QLers..IS HE???"</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C4" RELC_DATE="2010-07-02 12:37:55" RELC_USERID="U3661" RELC_USERNAME="ranishkt" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>working as a private driver is giving good income these days .. i pay 60 bugs for a pcikup and drop at DMIS from my hoem at madina kalifa .... hmmmm</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C5" RELC_DATE="2010-07-02 12:41:36" RELC_USERID="U4459" RELC_USERNAME="BarNieco" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>What does Qlers mean? Thanks for all your info and advice!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C6" RELC_DATE="2010-07-02 12:42:16" RELC_USERID="U4459" RELC_USERNAME="BarNieco" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Thats good to know! Do you use your own car?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C7" RELC_DATE="2010-07-02 14:00:44" RELC_USERID="U77" RELC_USERNAME="qatarisun" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>do you pay 60 bugs ??? what the hell is that supposed to mean?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C8" RELC_DATE="2010-07-02 14:03:03" RELC_USERID="U49" RELC_USERNAME="edifis" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>He gave 60 insects!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C9" RELC_DATE="2010-07-02 14:04:01" RELC_USERID="U49" RELC_USERNAME="edifis" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Where did you catch all those bugs from?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q203_R2_C10" RELC_DATE="2010-07-02 14:06:53" RELC_USERID="U197" RELC_USERNAME="nomerci" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>"Ah; maybe an alternative would b for the husband to become a ""bug catcher""; apparently bugs are used as currency! You learn something new everyday!"</RelCText>
+		</RelComment>
+	</Thread>
+</xml>

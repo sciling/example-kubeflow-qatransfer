@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml [
+<!ELEMENT xml (Thread*)>
+<!ATTLIST xml
+version CDATA #REQUIRED
+>
+<!ELEMENT Thread (RelQuestion, RelComment*)>
+<!ATTLIST Thread
+ THREAD_SEQUENCE CDATA #REQUIRED
+>
+<!ELEMENT RelQuestion (RelQSubject, RelQBody)>
+<!ATTLIST RelQuestion
+RELQ_ID CDATA #REQUIRED
+RELQ_CATEGORY CDATA #REQUIRED
+RELQ_DATE CDATA #REQUIRED
+RELQ_USERID CDATA #REQUIRED
+RELQ_USERNAME CDATA #REQUIRED
+>
+<!ELEMENT RelQSubject (#PCDATA)>
+<!ELEMENT RelQBody (#PCDATA)>
+<!ELEMENT RelComment (RelCText)>
+<!ATTLIST RelComment
+RELC_ID CDATA #REQUIRED
+RELC_DATE CDATA #REQUIRED
+RELC_USERID CDATA #REQUIRED
+RELC_USERNAME CDATA #REQUIRED
+RELC_RELEVANCE2RELQ CDATA #REQUIRED
+>
+<!ELEMENT RelCText (#PCDATA)>
+]>
+<xml version="1.0">
+
+	<Thread THREAD_SEQUENCE="Q318_R6">
+		<RelQuestion RELQ_ID="Q318_R6" RELQ_CATEGORY="Opportunities" RELQ_DATE="2012-12-26 17:50:49" RELQ_USERID="U3" RELQ_USERNAME="anonymous">
+			<RelQSubject>IT Jobs in Qatar</RelQSubject>
+			<RelQBody>how hard is it for you to get a decent paying job in qatar? I had applied in bayt;monstergulf and gulftalent almost religiously every day and yet I am getting nothing more than having my CV viewed. I have 4 years + experience in Linux and Unix environment and a handful of certifications to boot also. well; while its back to updating my CV; I'd love to hear about your experiences on getting a job here.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q318_R6_C1" RELC_DATE="2012-12-26 18:28:16" RELC_USERID="U5529" RELC_USERNAME="baazir" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Ive been here for a month and getting nothing back like u. Finished BSc IT and Worked in a large comp in UK for 3 years. Having hundred of knowledge sectors and certificates but everything became useless before gulf experience. Beyond ad and job sites Im visiting to companies and created own portfolio web as well. Got 3 or 4 mails since advertised and just they got back my resume. Lets see Good Luck to u :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C2" RELC_DATE="2012-12-26 19:56:40" RELC_USERID="U5530" RELC_USERNAME="lailuen" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>seems like there are lot of job opportunities but nobody seems to get it... i hear people coming to work in Qatar everyday... but doesnt seems to be able to fing wokr myself</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C3" RELC_DATE="2012-12-26 22:03:05" RELC_USERID="U996" RELC_USERNAME="BlueBull" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Qatar is not the place for people with IT Experiencewho really want to make a career in IT. Qatar IT is desktop and network management only.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C4" RELC_DATE="2012-12-26 22:32:23" RELC_USERID="U5531" RELC_USERNAME="sandeepclt" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>i am here for last 1 month and not even called for a single interview. i have 8 yrs of IT exp and worked for one of the biggest MNC in India. looks like the decision to come here turning out to be wrong... bcoz i am confident on my skills; may go back back to india after searching for 1 more month :) i didn't get any guidance b4 coming. so pls come here if someone can get you a job... Sandy</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C5" RELC_DATE="2012-12-27 07:35:30" RELC_USERID="U5532" RELC_USERNAME="praveen06527" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Shall we talk about gulftalent...I think it is a wasiting of time...No positive response for me for the last three years from gulftalent.Now i stopped to login to that.better we go directly to the company career site.Expecting your valuable comments.thanks to all in advance.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C6" RELC_DATE="2012-12-27 11:18:28" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>how did u advertise your resume then? this place is kind of depressing isn't it?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C7" RELC_DATE="2012-12-27 12:53:02" RELC_USERID="U4100" RELC_USERNAME="Brad_cin_dell" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>On the same boat.. :-(</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C8" RELC_DATE="2012-12-27 15:04:25" RELC_USERID="U5533" RELC_USERNAME="shafcp" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>forward ur cv to admin@arablandgroup.com; let hope for the best</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C9" RELC_DATE="2012-12-27 15:50:53" RELC_USERID="U5534" RELC_USERNAME="Ahmad_Mansoor" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>well maybe if there wasn't 1 billion of you guys trying to take the same job from those few companies. Yet the new generation is also going crazy enrolling in IT degrees... How many IT jobs you think there are in this place? Unix and Linux are jobs for men in here.. Yes believe me; certain jobs are dedicated for each gender... an IT company that needs a Unix admin; that is 99.99% male dominated department would NEVER hire a woman. Sorry to burst the bubble; reality is bitter Good luck try harder.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R6_C10" RELC_DATE="2012-12-27 16:16:18" RELC_USERID="U5535" RELC_USERNAME="Azhar89" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>An IT job in the middle east; especially Qatar - Not a smart idea!</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q318_R52">
+		<RelQuestion RELQ_ID="Q318_R52" RELQ_CATEGORY="Salary and Allowances" RELQ_DATE="2008-08-12 17:29:03" RELQ_USERID="U3" RELQ_USERNAME="anonymous">
+			<RelQSubject>ONLINE JOBS</RelQSubject>
+			<RelQBody>Recently I saw an ad by Google; data entry jobs online. It required we give a fee and then they promise us a fixed amount every month. Is this a scam? or is it ok to proceed with it?? If so; do anyone know sites to get more online jobs; which is safe?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q318_R52_C1" RELC_DATE="2008-08-12 17:36:04" RELC_USERID="U5536" RELC_USERNAME="classdiver" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>scam....takecare</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C2" RELC_DATE="2008-08-12 17:39:38" RELC_USERID="U63" RELC_USERNAME="mjamille28" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>well; probably is so i be more careful if i were you... why you looking for online jobs anyway;..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C3" RELC_DATE="2008-08-12 17:59:30" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Bcoz i got a baby and iam nt intrested to send him in a day care. thats y iam looking for an online job. so that i can work from home.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C4" RELC_DATE="2008-08-12 18:20:33" RELC_USERID="U1694" RELC_USERNAME="tallboy_v" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>I suggest u better start a baby sitting centre. You can earn good money by that way. Moreover ur baby will have other babies to play with. Me believes; couples who have got jobs as well as babies will benefit by this service of yours and you can make good money. Just my 2 cents.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C5" RELC_DATE="2010-01-23 14:53:21" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i am looking for job networking Vendor Certifications:  Microsoft Certified System Administrator (MCSA) (ID # 6193829)  Cisco Certified Network Associate (CCNA) (ID#11688483 ) (Exam code: 640-802) Academic Qualifications:- ng (009746235545 )</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C6" RELC_DATE="2010-03-05 10:41:59" RELC_USERID="U5537" RELC_USERNAME="remyajay" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I am a Diploma holder in Electronics Engineering.. Now i have a baby; so i am searching online jobs. Please contact to 6144520.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C7" RELC_DATE="2010-03-05 13:06:46" RELC_USERID="U5538" RELC_USERNAME="Aussie235" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I think it is a scam. Do not pay any fee; false promises are made online everyday. Be carefull.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C8" RELC_DATE="2010-03-05 13:10:57" RELC_USERID="U1070" RELC_USERNAME="fanonite" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>online jobs are 99.9% scam....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C9" RELC_DATE="2010-03-05 13:28:14" RELC_USERID="U3920" RELC_USERNAME="HABIBMDH" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>SCAM !!!!!!!!!!!!!!!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q318_R52_C10" RELC_DATE="2010-04-04 07:31:18" RELC_USERID="U5539" RELC_USERNAME="Rockistan" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Can anybody help me out in finding out an online data entry job or an Online form submission jobs in QATAR ???IS THERE ANY COMPANY ANY FIRM WHICH PROVIDE THESE KINDA JOBS ??? ONLINE DATA ENTRY KINDA JOBS??? PLZ I NEED THIS JOB URGENTLY AS POSSIBLE WAITING 4 UR REPLY !PLZ DO REPLY TO THIS THREAD AS SOON AS POSSIBLE THANKS :) actually I wanted to knw abt the websites which provide this kinds jobs but the payment should be good enough depending upon work load? secondy i searched randomly in google but most of them r jst fake as far as em concerned!! but surely i`ll chk out in classifieds here in qatar living! frankly speakin i actually wanted da online form submisson job in QATAR only dats the imp. part! plz help me out if and post a link if anyone knws abt any website or if any one is doin dis kinda job?</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q319_R1">
+		<RelQuestion RELQ_ID="Q319_R1" RELQ_CATEGORY="Politics" RELQ_DATE="2008-05-07 13:27:45" RELQ_USERID="U2724" RELQ_USERNAME="mghozlan">
+			<RelQSubject>Mix Marriages</RelQSubject>
+			<RelQBody>Do u think that 2 from 2 different cultures shall have a good marriage i mean will it last; (believes; customs; even language) not the same ! i'm not talking about 2 from 2 different countries in Europe; or 2 in Asia; or 2 in Africa; ... i'm talking about the one's where completely no similarity?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q319_R1_C1" RELC_DATE="2008-05-07 13:29:38" RELC_USERID="U1724" RELC_USERNAME="Gumby" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Certainly it can work; and work well; depends on the individuals.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C2" RELC_DATE="2008-05-07 13:32:55" RELC_USERID="U78" RELC_USERNAME="qatarisun" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>but if they both will try to work it out; and both will adjust themselves  through the years of togetherness.... everything is possible.. why not? I know few examples when she is European/Canadian/Eastern European; and he is Jamaica/Lebanese/Mexican… or she is Brazilian; he is English…why not?? ********** [img_assist|nid=102563|title=QS|desc=|link=none|align=left|width=|height=0] Copyright©Mr.PAUL</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C3" RELC_DATE="2008-05-07 13:35:01" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It can work of course an it does work see many of the mixed marriages around the world. People learn to compromise and to adjust if they are clever.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C4" RELC_DATE="2008-05-07 13:37:26" RELC_USERID="U463" RELC_USERNAME="swissgirl39" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>love negoates all barriers *WHAT WOULD YOU DO IF YOU KNEW YOU COULD NOT FAIL?* http://www.myswitzerland.com/en.cfm/home</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C5" RELC_DATE="2008-05-07 13:44:19" RELC_USERID="U78" RELC_USERNAME="qatarisun" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"love has nothing to do with that...if they NEED each other; they will work it out.. if not.. forget about it....no any ""love"" can help.... ********** [img_assist|nid=102563|title=QS|desc=|link=none|align=left|width=|height=0] Copyright©Mr.PAUL"</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C6" RELC_DATE="2008-05-07 13:46:17" RELC_USERID="U5540" RELC_USERNAME="NAVYBLUE" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>ıf they love each other too much that can make thıngs and dıfferences work together...love and respct is the secret</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C7" RELC_DATE="2008-05-07 13:49:27" RELC_USERID="U16" RELC_USERNAME="Oryx" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I can't get the lock fixed on the boot of my car for love nor money! For the love of whoever fix yourself please boot lock!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C8" RELC_DATE="2008-05-07 13:52:54" RELC_USERID="U78" RELC_USERNAME="qatarisun" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>we have got a shortage yesterday... hey someone from KAHRAMAA with BIG... LOVE.. can you pls fix it??? ********** [img_assist|nid=102563|title=QS|desc=|link=none|align=left|width=|height=0] Copyright©Mr.PAUL</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C9" RELC_DATE="2008-05-07 13:54:49" RELC_USERID="U385" RELC_USERNAME="owen" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"there are a lot living testimonies that this kind of relationship works... you got to work harder in order to make a relationship work; and this goes to all sort of ""mixes"" ""combination"" of nationalities you got in mind.. Love conquers all as they say..   [img_assist|nid=12867|link=none|align=left|width=|height=0] Nothing in life is to be feared. It is only to be understood."</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R1_C10" RELC_DATE="2008-05-07 13:55:58" RELC_USERID="U18" RELC_USERNAME="Khanan" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>early morning i got call from the buddy with regard to that... was surprized to hear that.... i think some inspecotrs came to the house.....</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q319_R2">
+		<RelQuestion RELQ_ID="Q319_R2" RELQ_CATEGORY="Qatar Living Lounge" RELQ_DATE="2012-12-19 20:28:26" RELQ_USERID="U5541" RELQ_USERNAME="JomanaZ">
+			<RelQSubject>Mixed Marriages</RelQSubject>
+			<RelQBody>With the world turning into a small village; mixed marriages have become more and more common. If you are in a mixed marriage relationship and living in Doha; Could you provide details on how you and your significant other met? where? how long have you been married for? and what are the goods and bads in a mixed marriage? Thank you;</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q319_R2_C1" RELC_DATE="2012-12-19 20:55:39" RELC_USERID="U999" RELC_USERNAME="LOL.XD" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Dont Try Dude i m Regreting :D Dont Marry at all Thats The Best i cant Tell You!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C2" RELC_DATE="2012-12-19 21:14:06" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Met in a bar; must say I was very drunk</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C3" RELC_DATE="2012-12-19 21:33:34" RELC_USERID="U5127" RELC_USERNAME="dash201" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Well she was working as waitress at a cocktail bar...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C4" RELC_DATE="2012-12-19 22:14:23" RELC_USERID="U269" RELC_USERNAME="britexpat" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>What a strange question. Mixed marriages can succeed but they take a lot of effort from both parties. Good luck with yours..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C5" RELC_DATE="2012-12-19 23:18:57" RELC_USERID="U969" RELC_USERNAME="one_shot" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>well said Brit nothing to add more. in fact i think u stole my comment :) grrrrr</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C6" RELC_DATE="2012-12-19 23:34:11" RELC_USERID="U2484" RELC_USERNAME="Blosted" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>@costylove what the hell?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C7" RELC_DATE="2012-12-19 23:35:51" RELC_USERID="U5542" RELC_USERNAME="costylove" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i said it ! :P</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C8" RELC_DATE="2012-12-19 23:37:59" RELC_USERID="U2484" RELC_USERNAME="Blosted" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>congratulations!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C9" RELC_DATE="2012-12-20 00:09:51" RELC_USERID="U5543" RELC_USERNAME="arc736" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Dear; there is no specific Formula for a successful Marriage whether its; Loved; Arranged; Mixed; Intercontinental its all depends on ones attitude n sacrifices... Choose your way wiseLy gOOd lucK ;)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R2_C10" RELC_DATE="2013-05-03 14:55:50" RELC_USERID="U5542" RELC_USERNAME="costylove" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>...</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q319_R6">
+		<RelQuestion RELQ_ID="Q319_R6" RELQ_CATEGORY="Qatari Culture" RELQ_DATE="2009-10-21 12:12:02" RELQ_USERID="U5544" RELQ_USERNAME="pigrah">
+			<RelQSubject>interacial relationship</RelQSubject>
+			<RelQBody>OK so we see a lot of interacial relationships in this country..what do u guys think about it? common...i need ur opinon.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q319_R6_C1" RELC_DATE="2009-10-21 12:14:02" RELC_USERID="U63" RELC_USERNAME="mjamille28" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>it happens; no big deal although some people seem to get the kick out of making it a big deal... it's their choice and nobody's business but theirs and theirs alone..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C2" RELC_DATE="2009-10-21 12:17:38" RELC_USERID="U1213" RELC_USERNAME="rehanbutt" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>it reinforces the believe that we are all same . it is the choice of the couple and their business only</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C3" RELC_DATE="2009-10-21 12:21:07" RELC_USERID="U269" RELC_USERNAME="britexpat" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It's more common than you think .. Learn to embrace and accept it.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C4" RELC_DATE="2009-10-21 12:21:30" RELC_USERID="U5545" RELC_USERNAME="momo1962" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>it is interracial !!! I think it is a gift from God . God says that he created male and female and nationas .. just for each to know each ther .. knwo mean live near and learn and share ... I am not against .</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C5" RELC_DATE="2009-10-21 12:36:51" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It's great!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C6" RELC_DATE="2009-10-21 12:40:15" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Its excellent. Once we are all mixed up; it will be very hard to be racist.... it is something the gulf arabs should adopt more and more as it will cut down on genetic complications....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C7" RELC_DATE="2009-10-21 12:51:39" RELC_USERID="U5544" RELC_USERNAME="pigrah" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>well said exiledsaint! i hope the rest of the human race would be open minded like all u guys here. im really not the type that cares about wat other people might think....but i cant help getting pissed off when other people stares and gives u the look like..wat the F or much worse is the look that says; hey baby wassup! uggghhh!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C8" RELC_DATE="2009-10-21 13:01:20" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Start enjoying;;; wat u heard;;; n wat u see here :P We were given: Two hands to hold. To legs to walk. Two eyes to see. Two ears to listen. But why only one heart? Because the other was given to someone else. For us to find.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C9" RELC_DATE="2009-10-21 13:07:51" RELC_USERID="U998" RELC_USERNAME="snessy" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I think its great - your children will grow up to understand and respect different religions/cultures.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R6_C10" RELC_DATE="2009-10-21 13:17:48" RELC_USERID="U3323" RELC_USERNAME="EXLegend" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>i admire it.. especially the offsprings out of such relationships... they turn out to be special looking (not that others aren't) but the culture deminishes little by little.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q319_R40">
+		<RelQuestion RELQ_ID="Q319_R40" RELQ_CATEGORY="Socialising" RELQ_DATE="2009-04-27 16:53:47" RELQ_USERID="U5546" RELQ_USERNAME="chen">
+			<RelQSubject>"3rd cousin relationship; possible??</RelQSubject>
+			<RelQBody>is 3rd cousin relationship already accepted in church or in society? i mean like ""lovers""..."</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q319_R40_C1" RELC_DATE="2009-04-27 17:00:04" RELC_USERID="U169" RELC_USERNAME="azilana7037" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Even the thought of it is a sin...yaiiiks!!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C2" RELC_DATE="2009-04-27 17:04:01" RELC_USERID="U211" RELC_USERNAME="DaRuDe" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>IMAGE_LINK</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C3" RELC_DATE="2009-04-27 17:14:41" RELC_USERID="U429" RELC_USERNAME="tallg" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"I think in the UK it's legal for cousins to be ""lovers"". But any closer relation than that is illegal. Here I believe it's more common."</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C4" RELC_DATE="2009-04-27 17:19:43" RELC_USERID="U5546" RELC_USERNAME="chen" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>3rd cousins is not a big deal; right?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C5" RELC_DATE="2009-04-27 17:19:46" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>one of the reason why a lot of abnormal child birth..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C6" RELC_DATE="2009-04-27 17:20:47" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>she/hes your 3rd cousin your DNA almost match...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C7" RELC_DATE="2009-04-27 17:26:47" RELC_USERID="U5546" RELC_USERNAME="chen" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>pit; it occurs more with 1st cousins... and abnormal birth? its commonly caused by the pressure given to the mother</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C8" RELC_DATE="2009-04-27 17:29:07" RELC_USERID="U429" RELC_USERNAME="tallg" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Looking at this diagram I'd say 3rd cousins are so far apart there's no problem. And as I said; I think the UK even allows 1st cousin relationships.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C9" RELC_DATE="2009-04-27 17:29:30" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>it is already proven.just look around..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R40_C10" RELC_DATE="2009-04-27 17:32:21" RELC_USERID="U5546" RELC_USERNAME="chen" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>thanks tallg; and yeah right pit; forgot to look at you :)</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q319_R44">
+		<RelQuestion RELQ_ID="Q319_R44" RELQ_CATEGORY="Politics" RELQ_DATE="2009-11-23 17:57:19" RELQ_USERID="U3" RELQ_USERNAME="anonymous">
+			<RelQSubject>What makes Indian woman so exotic and erotic?</RelQSubject>
+			<RelQBody>Fill out your comments please.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q319_R44_C1" RELC_DATE="2009-11-23 17:58:29" RELC_USERID="U598" RELC_USERNAME="phoenix2009" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>is she?????? Yalla!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C2" RELC_DATE="2009-11-23 17:59:22" RELC_USERID="U4737" RELC_USERNAME="chinx_lady" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>hhmmmm.....really?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C3" RELC_DATE="2009-11-23 18:01:15" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Indian Woman- The most gorgeous woman in the world.. It's a mix of a number of things really from the skin complexion to the way they dress. I Loooooveeeeeeee women in Saris; they simply floor me.. It can be so seductive yet so traditional; amazing.. So many other things I can go on and on and on..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C4" RELC_DATE="2009-11-23 18:07:40" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>IMAGE_LINK</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C5" RELC_DATE="2009-11-23 18:07:47" RELC_USERID="U232" RELC_USERNAME="Pajju" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>my GF is really erotic</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C6" RELC_DATE="2009-11-23 18:09:52" RELC_USERID="U4737" RELC_USERNAME="chinx_lady" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i thought you already have a wife pajju?;)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C7" RELC_DATE="2009-11-23 18:10:34" RELC_USERID="U232" RELC_USERNAME="Pajju" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>chinx i meant my mistress :P</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C8" RELC_DATE="2009-11-23 18:11:58" RELC_USERID="U3" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>They look like filipinas; that makes them erotic.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C9" RELC_DATE="2009-11-23 18:13:20" RELC_USERID="U232" RELC_USERNAME="Pajju" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>MD indians look like philippina ?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q319_R44_C10" RELC_DATE="2009-11-23 18:13:57" RELC_USERID="U4301" RELC_USERNAME="certified BisDak" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Boston...........pls call us anything u want just dont say we look like indians.....we are totally different............</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q320_R1">
+		<RelQuestion RELQ_ID="Q320_R1" RELQ_CATEGORY="Advice and Help" RELQ_DATE="2014-09-10 11:30:44" RELQ_USERID="U5547" RELQ_USERNAME="Ahmed Nagieb">
+			<RelQSubject>Is it a good offer ?</RelQSubject>
+			<RelQBody>Dear all; I need your help please :) ; i got an offer from Habtoor leighton group for Planning Engineer position. They are offering 10K (plus medical insurance) without any other allowances. I have 2 years of experience; is it a good offer or i can have better ?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q320_R1_C1" RELC_DATE="2014-09-10 11:55:24" RELC_USERID="U1966" RELC_USERNAME="doha expat00" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Its very good for a 2 years exp employee</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C2" RELC_DATE="2014-09-10 12:11:47" RELC_USERID="U640" RELC_USERNAME="acchabaccha" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Grab the offer.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C3" RELC_DATE="2014-09-10 12:17:39" RELC_USERID="U5548" RELC_USERNAME="YourConsultants" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Yes I agree with Doha expat00; for 2 years of experience it's a very good offer</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C4" RELC_DATE="2014-09-10 12:21:23" RELC_USERID="U5547" RELC_USERNAME="Ahmed Nagieb" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Thank you all for such quick responds. I was little worried that i could negotiate for a better offer</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C5" RELC_DATE="2014-09-10 12:24:37" RELC_USERID="U5547" RELC_USERNAME="Ahmed Nagieb" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>specially there's no allowances at all (flat; transportation; flight tickets and even phone calls)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C6" RELC_DATE="2014-09-10 12:32:54" RELC_USERID="U516" RELC_USERNAME="mast kalandar" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>you may be need to spend aroung 5-6k for single accomadation; food and phone internet bills balance you can save them for your future welcome to doha on your new assignment brother</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C7" RELC_DATE="2014-09-10 12:33:56" RELC_USERID="U5549" RELC_USERNAME="kamran.rasul" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Negotiate to get flight tickets and transportation allowance from them.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C8" RELC_DATE="2014-09-10 12:39:38" RELC_USERID="U5547" RELC_USERNAME="Ahmed Nagieb" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I'll try; Thanks a lot guys</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C9" RELC_DATE="2014-09-10 12:51:37" RELC_USERID="U514" RELC_USERNAME="muhammad yasir siddiqui" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>if this offer includes accomodation &amp; Tranportation then its fine other wise negotiate up to 12k at least...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R1_C10" RELC_DATE="2014-09-10 13:06:26" RELC_USERID="U5547" RELC_USERNAME="Ahmed Nagieb" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>They closed the door for any allowances; my hope to negotiate for a raise :)</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q320_R2">
+		<RelQuestion RELQ_ID="Q320_R2" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2012-12-09 18:29:42" RELQ_USERID="U5550" RELQ_USERNAME="ph-mizo">
+			<RelQSubject>Is it good offer ?</RelQSubject>
+			<RelQBody>Hi Frds;i QA supervisor with 8 years exp in pharmaceutical industries have got job offer from Qatar pharma company; Salary which they have offered to me is 5000QAR + Accommodation + Food. one time air ticket+ medical insurance. Will it be a good offer to accept for decent living and savings. and what abt this company ; is it good or not? Please share your thoughts about this. Thanks :)</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q320_R2_C1" RELC_DATE="2012-12-09 18:30:31" RELC_USERID="U5550" RELC_USERNAME="ph-mizo" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>very urgent</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C2" RELC_DATE="2012-12-09 18:58:45" RELC_USERID="U5551" RELC_USERNAME="french kiss" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>not really god offer !!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C3" RELC_DATE="2012-12-09 19:05:43" RELC_USERID="U804" RELC_USERNAME="NimbuPani" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>What is your year of experience ?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C4" RELC_DATE="2012-12-09 19:06:40" RELC_USERID="U5550" RELC_USERNAME="ph-mizo" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>thanx my dear . bt wht abt the company it self is it good or not?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C5" RELC_DATE="2012-12-09 19:07:43" RELC_USERID="U5550" RELC_USERNAME="ph-mizo" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>8 years</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C6" RELC_DATE="2012-12-09 19:16:09" RELC_USERID="U5552" RELC_USERNAME="jhorn871992" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Good offer ; if they will release you aftervthe contract</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C7" RELC_DATE="2012-12-09 19:16:13" RELC_USERID="U5552" RELC_USERNAME="jhorn871992" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Good offer ; if they will release you aftervthe contract</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C8" RELC_DATE="2012-12-09 19:16:13" RELC_USERID="U5552" RELC_USERNAME="jhorn871992" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Good offer ; if they will release you aftervthe contract</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C9" RELC_DATE="2012-12-09 19:16:13" RELC_USERID="U5552" RELC_USERNAME="jhorn871992" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Good offer ; if they will release you aftervthe contract</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R2_C10" RELC_DATE="2012-12-09 19:16:14" RELC_USERID="U5552" RELC_USERNAME="jhorn871992" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Good offer ; if they will release you aftervthe contract</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q320_R5">
+		<RelQuestion RELQ_ID="Q320_R5" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2011-09-07 12:00:22" RELQ_USERID="U5553" RELQ_USERNAME="engineer1969">
+			<RelQSubject>is it a good offer</RelQSubject>
+			<RelQBody>Hi all; I have an offer for approx 37000 Qriyals per month. I am an engineer with 18 years experience. Is this a good offer? Thanks</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q320_R5_C1" RELC_DATE="2011-09-07 12:04:33" RELC_USERID="U5554" RELC_USERNAME="amazinglife" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>considering the cost of housing as QR 10000 pm ; u can judge; what u are getting than the present.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C2" RELC_DATE="2011-09-07 12:05:22" RELC_USERID="U5555" RELC_USERNAME="Faisaldesigner" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Don't think more. It is good &amp; best offer I think</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C3" RELC_DATE="2011-09-07 12:07:02" RELC_USERID="U757" RELC_USERNAME="galloper48" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>or aside from this you get other benefits like: housing; medical care; car; education expenses; ticket to your country...to say the least. If it's an all inclusive then the majority of the expenses are going to be housing and education. If all other expenses/allowances are to be added then it is a terrific offer. Take it!!! Regards!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C4" RELC_DATE="2011-09-07 12:11:10" RELC_USERID="U129" RELC_USERNAME="s_isale" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>since you have already accepted the offer; whats the point in asking whether it is good or bad?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C5" RELC_DATE="2011-09-07 12:52:01" RELC_USERID="U1107" RELC_USERNAME="mesolazy" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>no its not a good offer. its too much money per month..what will u do with all that money..... more money = more tension = heart problems = death. since u r already in your 40s u have already lived ure life...the money u earn now will cause problems for others around u...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C6" RELC_DATE="2011-09-07 13:09:57" RELC_USERID="U5556" RELC_USERNAME="be_happy_cool" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>go ahead.............</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C7" RELC_DATE="2011-09-07 13:17:29" RELC_USERID="U537" RELC_USERNAME="xedesmarie" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>engineer1969 if this offer is inclusive of everything; which means (transportation;accommodation; etc.) and you are not a luxurious type of person; its a good offer. even you will bring your family with you; you can live with this offer. but; of course; as what i am saying; it depends on how you live your life. there are expats here with families and receiving lower than that but they are here for a long time already. hope this will help you. ~smile always~</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C8" RELC_DATE="2011-09-07 13:24:19" RELC_USERID="U353" RELC_USERNAME="ghazalz" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>It's a good offer! People manage comfortable living even with half of this amount...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C9" RELC_DATE="2011-09-07 22:03:26" RELC_USERID="U1709" RELC_USERNAME="tigabaguio" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>what company is that??? im an engineer too.. em sure your white.. too bad my skin si brown.. my basic is un imaginable.. but better than my salary back home so i still took the job.. and i pitty my self knowing ur offer asking if it is a good offer or not.. with the same job our wage differ much bec of our skin colour lol..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q320_R5_C10" RELC_DATE="2011-09-08 07:32:37" RELC_USERID="U5557" RELC_USERNAME="lhegs" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>He is 'pana' coz if he is white then that offer is not enough for him due to high standard living in western country.</RelCText>
+		</RelComment>
+	</Thread>
+</xml>

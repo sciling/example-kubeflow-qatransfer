@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml [
+<!ELEMENT xml (Thread*)>
+<!ATTLIST xml
+version CDATA #REQUIRED
+>
+<!ELEMENT Thread (RelQuestion, RelComment*)>
+<!ATTLIST Thread
+ THREAD_SEQUENCE CDATA #REQUIRED
+>
+<!ELEMENT RelQuestion (RelQSubject, RelQBody)>
+<!ATTLIST RelQuestion
+RELQ_ID CDATA #REQUIRED
+RELQ_CATEGORY CDATA #REQUIRED
+RELQ_DATE CDATA #REQUIRED
+RELQ_USERID CDATA #REQUIRED
+RELQ_USERNAME CDATA #REQUIRED
+>
+<!ELEMENT RelQSubject (#PCDATA)>
+<!ELEMENT RelQBody (#PCDATA)>
+<!ELEMENT RelComment (RelCText)>
+<!ATTLIST RelComment
+RELC_ID CDATA #REQUIRED
+RELC_DATE CDATA #REQUIRED
+RELC_USERID CDATA #REQUIRED
+RELC_USERNAME CDATA #REQUIRED
+RELC_RELEVANCE2RELQ CDATA #REQUIRED
+>
+<!ELEMENT RelCText (#PCDATA)>
+]>
+<xml version="1.0">
+
+	<Thread THREAD_SEQUENCE="Q268_R16">
+		<RelQuestion RELQ_ID="Q268_R16" RELQ_CATEGORY="Moving to Qatar" RELQ_DATE="2013-07-31 02:27:08" RELQ_USERID="U5151" RELQ_USERNAME="shehabi">
+			<RelQSubject>Best Bank.</RelQSubject>
+			<RelQBody>Hi ti all QL's; What bank you are using? and why? Are you using this bank just because it has an affiliate at home? Regards;</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q268_R16_C1" RELC_DATE="2013-07-31 06:46:39" RELC_USERID="U65" RELC_USERNAME="Molten Metal" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>banks are using us ... Talk to those who had taken a credit card or loan to know more ...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C2" RELC_DATE="2013-07-31 08:10:53" RELC_USERID="U956" RELC_USERNAME="Rip Cord" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>In Qatar that is like saying which is the best STD.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C3" RELC_DATE="2013-07-31 10:37:03" RELC_USERID="U5152" RELC_USERNAME="arman1arzoo" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I'm surprised to see such feedbacks on Qatar banks... Is there any serious problem with banks here? Please share if any one had a bad experience before. I'm using commercial bank and till now I'm OK with their services.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C4" RELC_DATE="2013-08-01 11:38:21" RELC_USERID="U5153" RELC_USERNAME="westernindoha" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Well Arman; nothing is wrong here with banks; I feel they are not up to par with UAE bank in terms of service at least not with the best which is abu dhabi islamic bank; but I have made an extensive review of QIB; IBQ; QNB and CBQ. I found out that QNB and CBQ are very dynamic; gives you a lot for cheap. My needs are: -Free Current account with no minimum balance with 2 debit card -Good credit card with airport lounge and added benefit -0% payment plan at good retaillers -Excellent mobile and internet banking -Cheap ATM and transfer for abroad... For the above; QNB and CBQ are the best. But it really depends on your salary too. IBQ is not very good. QIB is ridiculous.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C5" RELC_DATE="2013-08-01 11:45:49" RELC_USERID="U492" RELC_USERNAME="happygolucky" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>With QNB for last 4 years plus...no issues...great service with a smile (mostly) from Qatari's (yeah dont be surprised) and now since they started QNB First it just got even better...:)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C6" RELC_DATE="2013-08-02 06:38:26" RELC_USERID="U5151" RELC_USERNAME="shehabi" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>WesternInDoha; that's the information that I am looking for and it answer my question. Cheers...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C7" RELC_DATE="2013-08-02 06:46:37" RELC_USERID="U5151" RELC_USERNAME="shehabi" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>MoltenMetal; it depend how you are looking on the subject matter and the point of view; as the if the glass half empty or half full !!! There are fees for the service; I wish that we don't need banks and you reminded me of old days where we put the gold and the money in bags and bury them in the ground ;) Good Luck..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C8" RELC_DATE="2013-08-02 06:51:51" RELC_USERID="U5151" RELC_USERNAME="shehabi" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>That's new way of description for the Bank's... I am planing to do the same; let the company deposit the salary in the bank account and I will ignore it for some time ;) Cheers...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C9" RELC_DATE="2013-08-02 07:10:40" RELC_USERID="U5151" RELC_USERNAME="shehabi" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I don't know if it is the high competition? or No competition?? Is there any review issued by Central Bank? or any magazine ?? Is there any benchmark based on customer feedback?? When I searched QL there are so many disappointed and negative feedback from from bank clients I don't see the reasons behind it?? Regards;</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q268_R16_C10" RELC_DATE="2013-08-02 12:55:52" RELC_USERID="U5153" RELC_USERNAME="westernindoha" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Sheabi; the reason behind it; is that most people in QL have very low income; hence everytime a bank will take them a penny even a very justified one for a rendered service they will call them robbers...Also bank may not have the same level of service if you earn 2000 or 25000... I would advise you to find a the right branch and the right customer service agent; and stick to him to build a relationship. Because like everywhere you got some lazy people and you want to avoid them.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q269_R3">
+		<RelQuestion RELQ_ID="Q269_R3" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2007-03-27 14:56:42" RELQ_USERID="U5154" RELQ_USERNAME="Husam Abonaadj">
+			<RelQSubject>Where is the best place to catch fish in Qatar ?</RelQSubject>
+			<RelQBody>I really would like to know where the best place to catch fish here in Qatar is. But ofcourse from the beach . I go every week to Umsaeed but rerly i catch somthing ! So experianced people your reply will be appreciated.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q269_R3_C1" RELC_DATE="2007-03-27 17:11:34" RELC_USERID="U2984" RELC_USERNAME="lzxcoco" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>dun u know there is no green above water ?????????? and how much green underwater.....means....how much fish nearshore !!!!!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C2" RELC_DATE="2007-03-27 22:20:38" RELC_USERID="U431" RELC_USERNAME="King Edshel" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I was catching fish before on corniche and if i show you some of the photos you would not believe me. Now everything on Corniche is banned. No Fishing; No Playing Football; No Bikes; No setting on the grass and ... I don't know what is next. You can go to 'Khour El Edid' and see there. Actually on those open places there is no guarantee all the time. Even the area near the Ritz Carlton that we were going there before like 7 years [we were fulling 2 big Coleman Fridges which comes sometimes 12KG] it is now band. Good luck and if you know a new place; plz tell me. :)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C3" RELC_DATE="2007-03-28 01:00:26" RELC_USERID="U5154" RELC_USERNAME="Husam Abonaadj" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>you now i will try to go to Dokhan this time even if it is so far and i will tell the results later :) thanks</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C4" RELC_DATE="2007-04-26 19:21:20" RELC_USERID="U5155" RELC_USERNAME="Platini" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Well guys I am no fishing fanatic.. but those of you in the know.. could try the Wakra jetty; the bridge just before the Ritz and Dip club.. too has scholes of fish.....Dukhan is a looong way to go to catch some fish...All the best...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C5" RELC_DATE="2007-05-01 11:19:36" RELC_USERID="U1072" RELC_USERNAME="digital" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Ummsaid was good b4 sometime .. but now a days there is nothing unless you go further on the inland sea route.. but the best fishing grounds now is at Al-Khor ..u get all kinds of fishes there If you are really into fishing pm me</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C6" RELC_DATE="2009-02-02 07:12:37" RELC_USERID="U5156" RELC_USERNAME="erling" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>What do you use for bait? Lures; shrimps; doughballs?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C7" RELC_DATE="2009-02-02 07:52:25" RELC_USERID="U506" RELC_USERNAME="abohmaid" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>around sofitel hotel</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C8" RELC_DATE="2009-02-02 08:05:49" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Hey man; you need a boat and good bait.. Mostly people will use squid; not only salt water catfish but other species.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C9" RELC_DATE="2009-02-02 08:07:21" RELC_USERID="U2232" RELC_USERNAME="Andrews" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I think the best place is Fish Market..Guys dont get angry ...just kidding...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R3_C10" RELC_DATE="2009-02-02 08:15:28" RELC_USERID="U60" RELC_USERNAME="Rizks" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Androooz !!! I thought u would say; Choor Bazzar ( Najma Souq )..:)</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q269_R7">
+		<RelQuestion RELQ_ID="Q269_R7" RELQ_CATEGORY="Family Life in Qatar" RELQ_DATE="2008-11-04 08:31:13" RELQ_USERID="U5157" RELQ_USERNAME="whaggagy">
+			<RelQSubject>what is the best beach place for camping ?</RelQSubject>
+			<RelQBody>Hi what is the best beach place for camping and swimming for my family ? someone say to me in the north (front of Ghoria ) ! Need quiet place :)</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q269_R7_C1" RELC_DATE="2008-11-04 08:48:10" RELC_USERID="U51" RELC_USERNAME="baldrick2dogs" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Bir Zekreet. Just make sure to take all your crap with you when you've finished. Leave only footprints! Did you Google it first?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C2" RELC_DATE="2008-11-04 08:53:22" RELC_USERID="U348" RELC_USERNAME="who.am.i" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>in Al Khor :D the beach near the QG/rasgas accomodation.. lol. :D cheers; paul</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C3" RELC_DATE="2008-11-04 09:12:42" RELC_USERID="U210" RELC_USERNAME="DaRuDe" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Go to Fuwairit its on Shamal road about 75km from Doha.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C4" RELC_DATE="2008-11-04 09:14:09" RELC_USERID="U60" RELC_USERNAME="Rizks" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Gharia beach is also nice !!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C5" RELC_DATE="2008-11-04 09:31:55" RELC_USERID="U812" RELC_USERNAME="King29" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Al Wakrah is also a good beach...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C6" RELC_DATE="2008-11-04 09:42:05" RELC_USERID="U60" RELC_USERNAME="Rizks" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Wakrah Beach is turned into a Haunted Beach now.... Dugged everywere ...:(</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C7" RELC_DATE="2008-11-04 09:47:48" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Can someone give me excate co-ordinates for my GPS for Zekreet. Last time I visited the place; I ended up on a deserted land where I can not see any human benings and more over water was so dirty due to Sea Weed and Shell fish shells that we could hardly get into water. The wise person has long ears and a short tongue.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C8" RELC_DATE="2008-11-04 10:03:28" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Wakra is a Construction Site Now :( Ban Spoon Feeding not Me</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C9" RELC_DATE="2008-11-04 10:39:13" RELC_USERID="U3511" RELC_USERNAME="GetMe_Ifucan" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>To be loved Do love…….. Give Your Smile To Every One But Your Heart To Only One!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R7_C10" RELC_DATE="2008-11-04 10:41:01" RELC_USERID="U3511" RELC_USERNAME="GetMe_Ifucan" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>To be loved Do love…….. Give Your Smile To Every One But Your Heart To Only One!</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q269_R10">
+		<RelQuestion RELQ_ID="Q269_R10" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2011-01-17 14:37:17" RELQ_USERID="U3883" RELQ_USERNAME="justloverman">
+			<RelQSubject>Best Places to live in in DOHA ?</RelQSubject>
+			<RelQBody>hi QL where is the best place to live in Doha for a family with children and the average prices for each on U/F basis for 2 rooms for quits and clean and modern areas :)</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q269_R10_C1" RELC_DATE="2011-01-17 15:01:31" RELC_USERID="U309" RELC_USERNAME="nudge" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Ezdan Al Wakrah; QR 5200 with Water and Electricity; nice compound with all amenities. Quite and Calm</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C2" RELC_DATE="2011-01-17 15:04:47" RELC_USERID="U3883" RELC_USERNAME="justloverman" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>is that the only choice for it</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C3" RELC_DATE="2011-01-17 15:10:12" RELC_USERID="U373" RELC_USERNAME="Mandilulur" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Near work and school is best. Mandi</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C4" RELC_DATE="2011-01-17 15:28:25" RELC_USERID="U3883" RELC_USERNAME="justloverman" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>but maybe near work will be bad area or very expensive so u shall go a little bit far</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C5" RELC_DATE="2011-01-17 15:42:26" RELC_USERID="U51" RELC_USERNAME="baldrick2dogs" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>There aren't really any BAD areas; but I doubt you'd want to live in the industrial area; so follow Mandi's suggestion</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C6" RELC_DATE="2011-01-17 15:55:04" RELC_USERID="U5158" RELC_USERNAME="rocq" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>DOHA IS A GUD PLACE...:D</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C7" RELC_DATE="2011-01-17 16:18:52" RELC_USERID="U3883" RELC_USERNAME="justloverman" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>but i think some one here in QL said stay away from Bin Mahmoud and bin Omran why</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C8" RELC_DATE="2011-01-17 16:22:06" RELC_USERID="U5159" RELC_USERNAME="CHINGANFAISAL" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>BIN OMRAN</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C9" RELC_DATE="2011-01-17 16:23:00" RELC_USERID="U3883" RELC_USERNAME="justloverman" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>What about it</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R10_C10" RELC_DATE="2011-01-17 16:48:07" RELC_USERID="U5160" RELC_USERNAME="Malabarprince" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>anyplace far off from a school would be ideal to avoid traffic blocks esp in the mornings</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q269_R26">
+		<RelQuestion RELQ_ID="Q269_R26" RELQ_CATEGORY="Welcome to Qatar" RELQ_DATE="2010-07-11 09:31:44" RELQ_USERID="U5161" RELQ_USERNAME="caffeinatedGEN">
+			<RelQSubject>Where is the best place in Qatar to just sit down; relax; and read a book?</RelQSubject>
+			<RelQBody>A cup of coffee and a nice view is a plus as well :)</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q269_R26_C1" RELC_DATE="2010-07-11 09:34:04" RELC_USERID="U535" RELC_USERNAME="hms" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Corniche near sheraton hotel; but weather is not good; and also westbay area is also good;</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C2" RELC_DATE="2010-07-11 09:36:51" RELC_USERID="U1793" RELC_USERNAME="buddahtogs" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Well i guess better to stay in your house;lay down on your bed to read book or relax.Because the kind of weather that we are having now in qatar.I dont think so that you can stay outside even in the park just to read a book.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C3" RELC_DATE="2010-07-11 10:09:52" RELC_USERID="U223" RELC_USERNAME="ajmani" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>at Pearl</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C4" RELC_DATE="2010-07-11 10:10:21" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>the only place where it is reasonable nice to do so is the pearl or the Aspire park; but has no Aspire no coffee shop or any of the nice Hotels on the lounge terrace or by the pool but coffee will cost you 5x more... so you need to drink slowly..:)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C5" RELC_DATE="2010-07-11 10:12:52" RELC_USERID="U5162" RELC_USERNAME="Macky911" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>In corniche at near pearl.. But not now around 11:30AM* *contact HMC emergency to arrange an ambulance To pick you up at 12:00...LOL</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C6" RELC_DATE="2010-07-11 10:36:46" RELC_USERID="U236" RELC_USERNAME="yv2r" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Go to Al Bida park around 1630 take a cup of coffee(Not good one as no other option there)from the one of those stalls select a tree facing roa;sea or other side sit and relax have your coffe read book for some time and must leave before 1800 as humidity will push you out of that place;in this season.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C7" RELC_DATE="2010-07-11 11:25:42" RELC_USERID="U2594" RELC_USERNAME="avvid" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Inside Coffee Beanery; opposite Ramada; between 1200 - 1600 on Fridays. Get out after 1600; cos that's when the crowds come.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C8" RELC_DATE="2010-07-11 16:01:25" RELC_USERID="U477" RELC_USERNAME="gudone" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Home SWEET Home in ths hot weather</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C9" RELC_DATE="2010-07-11 17:17:02" RELC_USERID="U302" RELC_USERNAME="soniya" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>I too prefer my SWEET HOME for chillaxing..There is no better place than one's HOME to relax and enjoy..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R26_C10" RELC_DATE="2010-07-12 10:43:19" RELC_USERID="U5161" RELC_USERNAME="caffeinatedGEN" RELC_RELEVANCE2RELQ="PotentiallyUseful">
+			<RelCText>Thank you so much. At this weather yes; I think its hard to go out. I think I would opt to go inside a coffee shop :)</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q269_R27">
+		<RelQuestion RELQ_ID="Q269_R27" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2008-05-17 12:43:41" RELQ_USERID="U2" RELQ_USERNAME="anonymous">
+			<RelQSubject>Best Snorkeling place in Qatar</RelQSubject>
+			<RelQBody>Where in Qatar is the best place for Snorkeling? I'm planning to go out next friday but don't know where to go.</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q269_R27_C1" RELC_DATE="2008-05-17 12:47:13" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>"u r most welcome to QCA Cricket ground on friday 23.5.08 to see a WAR match between 2 QL[C] Teams =D [img_assist|nid=13716|title=|desc=|link=none|align=left|width=|height=0] [img_assist|nid=26062|title=|desc=|link=none|align=center|width=|height=0] ""Imagination is more important than knowledge"""</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C2" RELC_DATE="2008-05-17 12:57:30" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>and burn myself... thanks for inviting me anyway. Where is QCA Cricket Ground?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C3" RELC_DATE="2008-05-17 13:19:47" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>"its in Weat Bay near Ritz Carlton u can check QLSG to check more updates about weekends http://www.qatarliving.com/group/qatar-living-social-group [img_assist|nid=13716|title=|desc=|link=none|align=left|width=|height=0] [img_assist|nid=26062|title=|desc=|link=none|align=center|width=|height=0] ""Imagination is more important than knowledge"""</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C4" RELC_DATE="2008-05-17 13:29:19" RELC_USERID="U3611" RELC_USERNAME="wongqatar" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>The water is TURBID? Any reef there? Thanks WongQatar</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C5" RELC_DATE="2008-05-17 17:43:17" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>but I don't know the exact location... That's why I asked...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C6" RELC_DATE="2008-05-23 16:12:33" RELC_USERID="U3002" RELC_USERNAME="joeinqatar" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>been snorkeling at dukhan off the beach and in zekreet off the kayak was ok at both places. I think Fuwairit would be nice. also the national park off the north coast would be good to check out sometime</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C7" RELC_DATE="2008-05-24 21:53:07" RELC_USERID="U5163" RELC_USERNAME="ndglc" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Hi Guys; Nice to have the locations for snorkeling. Is anyone able to be more precise and give exact locations. I know the time is close to be over this year due to gelly fishs. Anyway; please advice the best locations to snorkel. Thanks in advance for your answers</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C8" RELC_DATE="2008-05-27 20:58:59" RELC_USERID="U5164" RELC_USERNAME="touringturtle" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I went snorkelling two days ago off the coast of Dukhan; about 2 km to the right of the Water Sports Club; near to the Desalination plant. Some massive rocks and colourless coral but there were quite a few different types of fish there; including some HUGE angel fish; very very nice spot. and yes... the jelly fish are here now!!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C9" RELC_DATE="2008-05-28 10:00:32" RELC_USERID="U1074" RELC_USERNAME="Cnidaria" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>"Best places are Fuwarait beach - swim striaght out and there are lots of corals; different fish; sea greass beds and sea snakes. If your really lucky turtles. Anywhere north of Ras Laffan should be good. I was at Umm Tais Natural Reserves (mentioned in post above - turn right at Al-Shammal and head east; first island is Ras Rakkan and is harder to get to; go past until a hamlet and past this you can access Umm Tais) a few weeks ago; interesting place but Fuwarait is easier to get to etc. ""Sandy"" beach we used to go to; Al-Dhakriah mangroves. There is generally less to see on west coast than the east coast unless you go to places near construction which for the east coast is now a lot!! Hence i recommend French beach / fuwarait. There are also a few nice locations you can snorkell in the inland sea; although currents at certain times are very very strong. GO past coastguard station at mouth and head along towards Saudi until you see obvious shallows."</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q269_R27_C10" RELC_DATE="2009-08-06 08:07:49" RELC_USERID="U5165" RELC_USERNAME="mio amor" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>From what you all have said; Fuwarait beach is a perfect place to explore; to enjoy and witness its natural reserves. Thanks for the share! I'm really waiting and seeking for answers of where to go and spend for our weekend vacation and adventure. hawaii snorkeling tours</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q270_R37">
+		<RelQuestion RELQ_ID="Q270_R37" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2012-10-30 02:43:25" RELQ_USERID="U5166" RELQ_USERNAME="vidyav1983">
+			<RelQSubject>Worth watching places in Qatar...</RelQSubject>
+			<RelQBody>I visited the following places during the Eid holidays: 1.Al Khor (Corniche; Lulu) 2.Simaisma (Beach; Park) 3.Sealine beach (Mesaieed) 4.Sheikh Faisal Museum (Shahaniya) 5.Al Wakra (Beach; Park) 6.Aspire park; Villagio Planning to visit Zubarah fort and Zekreet fort in the coming days.. Any other interesting places to add on to this list friends??</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q270_R37_C1" RELC_DATE="2012-10-30 08:35:16" RELC_USERID="U5167" RELC_USERNAME="Nehemias" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Museum of Islamic Art in Corniche and try to do crabbing for a change; it's more fun and very exciting...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C2" RELC_DATE="2012-10-30 08:37:13" RELC_USERID="U28" RELC_USERNAME="osamabawab" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>7. Katara (the cultural village) 8. Souq waqef 9. Rumailah Park (near doha Cornish) 10. Dahl Al-hamam Park (near landmark R/a)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C3" RELC_DATE="2012-10-30 09:46:05" RELC_USERID="U5168" RELC_USERNAME="dturknoy" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C4" RELC_DATE="2012-10-30 10:12:40" RELC_USERID="U1482" RELC_USERNAME="ricky_2005" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Try visiting Film City Zikhreet ; Fakreh Beach at Fakreh coastline Al Khor ; Dukhan Beach ; Fuwairit Beach ; Al Ghariya Beach and Purple Island at Dakhira .</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C5" RELC_DATE="2012-10-30 10:20:47" RELC_USERID="U5169" RELC_USERNAME="illathziyad" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Dear its an inderesting experience to visit qatar zoo in muaider near villagio</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C6" RELC_DATE="2012-10-30 10:29:21" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>you can visit our place; it's worth watching :-)</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C7" RELC_DATE="2012-10-30 10:34:29" RELC_USERID="U30" RELC_USERNAME="Captain_Lost" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Ghariyah beach / Fuwairat beach... old abandoned (so called haunted) village in Ghariya... Zubara Fort... Purple Island (I don't know WHY they call it Purple Island :P) .. and last but not least.. ME taking sunbath ;) !!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C8" RELC_DATE="2012-10-30 11:07:13" RELC_USERID="U5170" RELC_USERNAME="amahaz" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Qatari Star league football match go to AL Sad Stadium.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C9" RELC_DATE="2012-10-31 15:53:21" RELC_USERID="U5166" RELC_USERNAME="vidyav1983" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>"thanks a lot Nehemias; osamabawab; dturknoy; ricky_2005; illathziyad; amahaz.. hi tahsinmim; there are many people who understood what i meant by ""worth"" watching n they have given me lots of suggestions too..so i dont think its necessary to give u an explanation of ""worth"" watching.. sorry friend... :) hi mohisakhan; thanks for the invitation.."</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R37_C10" RELC_DATE="2012-10-31 17:10:00" RELC_USERID="U6" RELC_USERNAME="t_coffee_or_me" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Inland Sea.</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q270_R47">
+		<RelQuestion RELQ_ID="Q270_R47" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2013-02-19 22:16:33" RELQ_USERID="U804" RELQ_USERNAME="NimbuPani">
+			<RelQSubject>The Qatar Banana island</RelQSubject>
+			<RelQBody>The Qatar banana island will be transfered by the end of 2013 to 5 stars resort called Anantara. Has anyone seen this island?? Where is it ? Is it near to Corniche ?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q270_R47_C1" RELC_DATE="2013-02-19 22:23:39" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Does it have any monkeys on banana island?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C2" RELC_DATE="2013-02-19 22:50:12" RELC_USERID="U804" RELC_USERNAME="NimbuPani" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>That needs to be answered by babu....lol.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C3" RELC_DATE="2013-02-19 23:21:08" RELC_USERID="U2911" RELC_USERNAME="achougle" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>In front of NDIA.30 min by speed boat from Corniche.Construction is going on since a year.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C4" RELC_DATE="2013-02-19 23:31:54" RELC_USERID="U804" RELC_USERNAME="NimbuPani" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Thanx</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C5" RELC_DATE="2013-02-20 01:01:43" RELC_USERID="U955" RELC_USERNAME="fubar" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Will it still be free to visit the island or will it change from bring free for everyone to another expensive place only for the rich?</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C6" RELC_DATE="2013-02-20 04:14:31" RELC_USERID="U5171" RELC_USERNAME="ABDUL-RAUF" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Lol ; it will spoiled soon</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C7" RELC_DATE="2013-02-20 05:20:58" RELC_USERID="U65" RELC_USERNAME="Molten Metal" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Spoilers always come if there is something ready to be spoiled ..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C8" RELC_DATE="2013-02-20 06:40:16" RELC_USERID="U804" RELC_USERNAME="NimbuPani" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>May be it will only be for the rich so that the poor families are separated from such enjoyment.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C9" RELC_DATE="2013-02-20 06:57:03" RELC_USERID="U134" RELC_USERNAME="timebandit" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Why there? I have enjoyed many visits to the island; and was under the illusion that it was there for everyone to enjoy. I could be wrong; but it would seem that it is probably going to be out of bounds to casual visitors in future. On the flip side; the island is man made. So I guess whoever made it must have had a good reason to pop an island right next to a massive new shiny international airport; and this is probably it. In which case; the owners can do what they like with their island. Well there ya go; I have answered my own question.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R47_C10" RELC_DATE="2013-02-20 07:48:28" RELC_USERID="U1942" RELC_USERNAME="alex brod" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>How it came called banana island?...</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q270_R51">
+		<RelQuestion RELQ_ID="Q270_R51" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2009-07-08 10:53:48" RELQ_USERID="U3816" RELQ_USERNAME="miss kendhy">
+			<RelQSubject>Tourist spots..</RelQSubject>
+			<RelQBody>Is there a good place here where i can spend some quality time with my friends??</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q270_R51_C1" RELC_DATE="2009-07-08 11:12:36" RELC_USERID="U3104" RELC_USERNAME="PITSTOP" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>It depends on your budget.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C2" RELC_DATE="2009-07-08 11:12:57" RELC_USERID="U114" RELC_USERNAME="GodFather." RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Ramada Hotel.. Has a lot of entertainment; restaurants; Bars and Clubs..and a big Carpark.. ----------------- HE WHO DARES WINS</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C3" RELC_DATE="2009-07-08 11:17:37" RELC_USERID="U5172" RELC_USERNAME="ninjarose" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>go to sealine; u will enjoy the trip going there and the beach when u get there. Plus; sand dunes...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C4" RELC_DATE="2009-07-08 11:23:52" RELC_USERID="U356" RELC_USERNAME="rMs_000" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>1. French Caves 2. Umbab 3. Khor Al Udeid -- tEaCh Me RuLeS; i'Ll TeAcH hOw To BrEaK iT .. rMs..!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C5" RELC_DATE="2009-07-08 11:25:39" RELC_USERID="U2512" RELC_USERNAME="chmb" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Sealine; Islamic Museum; the Pearl island is nice to visit; pool/beach at the hotels - Intercon hotel has a really nice pool and beach area;</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C6" RELC_DATE="2009-07-08 11:28:15" RELC_USERID="U297" RELC_USERNAME="alpha1" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>souq waqif khor al udid camel mrket</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C7" RELC_DATE="2009-07-08 11:29:50" RELC_USERID="U3816" RELC_USERNAME="miss kendhy" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>french caves?? how to get there?? how bout an amusement park like rides etc ...</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C8" RELC_DATE="2009-07-08 11:31:36" RELC_USERID="U2146" RELC_USERNAME="qatariboy2005" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>we also have the best weather on earth;dont forget that.looooooool</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C9" RELC_DATE="2009-07-08 11:34:06" RELC_USERID="U356" RELC_USERNAME="rMs_000" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>-- tEaCh Me RuLeS; i'Ll TeAcH hOw To BrEaK iT .. rMs..!!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R51_C10" RELC_DATE="2009-07-08 11:36:23" RELC_USERID="U2146" RELC_USERNAME="qatariboy2005" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>rMs..is that in qatar??? where a bout?</RelCText>
+		</RelComment>
+	</Thread>
+
+	<Thread THREAD_SEQUENCE="Q270_R58">
+		<RelQuestion RELQ_ID="Q270_R58" RELQ_CATEGORY="Sightseeing and Tourist attractions" RELQ_DATE="2011-10-30 11:12:06" RELQ_USERID="U5173" RELQ_USERNAME="iamspecial">
+			<RelQSubject>WHAT TO DO ON EID HOLIDAYS?</RelQSubject>
+			<RelQBody>any suggestions on what are the happenings in Qatar on Holidays? something new and exciting suggestions please?</RelQBody>
+		</RelQuestion>
+
+		<RelComment RELC_ID="Q270_R58_C1" RELC_DATE="2011-10-30 11:22:56" RELC_USERID="U3941" RELC_USERNAME="SmilingSantro" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>i m also searching for a rescue as I will die of cooking cleaning and ironing clothes only like last holidays....</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C2" RELC_DATE="2011-10-30 11:35:40" RELC_USERID="U2672" RELC_USERNAME="Khan1970" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>I am planning for messaied beach and Shahaniya Zoo</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C3" RELC_DATE="2011-10-30 11:40:32" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>ALL ARISH FORT LOCATION SHAMAL/AL RUWS DOHA TO AL ARISH 120 KM THE PORT NEAR AL ARISH RADIO STATION . ORGIN DESERT ARIA GO &amp; ENJOY</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C4" RELC_DATE="2011-10-30 11:49:37" RELC_USERID="U535" RELC_USERNAME="hms" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Please visit this link; there are plenty of places to visit in Qatar also. http://www.qatarliving.com/node/1438806</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C5" RELC_DATE="2011-10-30 12:59:16" RELC_USERID="U5174" RELC_USERNAME="tooba24" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>I am also trying to make some fun plans for my kids but so far dont know what we are going to do :(</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C6" RELC_DATE="2011-10-30 13:08:58" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>UAE here I Come! WOOT WOOT!</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C7" RELC_DATE="2011-10-30 13:45:56" RELC_USERID="U2" RELC_USERNAME="anonymous" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>Visit this website: The Videos of Secrets From Quran... The Videos You have never seen http://www.holyquran.multiply.com</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C8" RELC_DATE="2011-10-30 14:30:29" RELC_USERID="U5175" RELC_USERNAME="muhammedh" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Aqua park in Salwa road... I have heard it's a fun place..</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C9" RELC_DATE="2011-10-30 14:53:54" RELC_USERID="U6" RELC_USERNAME="t_coffee_or_me" RELC_RELEVANCE2RELQ="Good">
+			<RelCText>Arrange a Tailgate party at any of the numerous beaches.</RelCText>
+		</RelComment>
+
+		<RelComment RELC_ID="Q270_R58_C10" RELC_DATE="2011-10-30 18:39:53" RELC_USERID="U5173" RELC_USERNAME="iamspecial" RELC_RELEVANCE2RELQ="Bad">
+			<RelCText>hhhmmm nice suggestions anything more?</RelCText>
+		</RelComment>
+	</Thread>
+</xml>

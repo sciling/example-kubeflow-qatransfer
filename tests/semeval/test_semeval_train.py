@@ -10,8 +10,8 @@ from unittest import TestCase
 sys.path.append("..")
 
 
-DATA_DIR = "%s/../../data/test/semeval_files" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = tempfile.mkdtemp()
+DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
+WORK_DIR = '/tmp/semeval-tests'
 
 
 def download_squad():
@@ -21,20 +21,23 @@ def download_squad():
 
     from tqdm import tqdm
 
-    r_squad = requests.get(
-        "http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip "
-    )
-    total_size_in_bytes = int(r_squad.headers.get("content-length", 0))
-    progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)
-    with tempfile.TemporaryFile() as tf:
-        for chunk in r_squad.iter_content(chunk_size=1024):
-            progress_bar.update(len(chunk))
-            tf.write(chunk)
-        with zipfile.ZipFile(tf, "r") as f:
-            f.extractall(WORK_DIR)
-    progress_bar.close()
-    if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
-        print("ERROR, something went wrong")
+    if not os.path.exists(os.path.join(WORK_DIR, 'save/out/squad/basic/00/save')):
+        r_squad = requests.get(
+            "http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip "
+        )
+        total_size_in_bytes = int(r_squad.headers.get("content-length", 0))
+        progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)
+        with tempfile.TemporaryFile() as tf:
+            for chunk in r_squad.iter_content(chunk_size=1024):
+                progress_bar.update(len(chunk))
+                tf.write(chunk)
+            with zipfile.ZipFile(tf, "r") as f:
+                f.extractall(WORK_DIR)
+        progress_bar.close()
+        if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
+            print("ERROR, something went wrong")
+    else:
+        print('SQUAD models already downloaded')
 
 
 class TestAll(TestCase):
@@ -51,14 +54,14 @@ class TestAll(TestCase):
         num_steps = "1"
         eval_period = "1"
         save_period = "1"
-        model_path = tempfile.mkdtemp()
+        model_path = WORK_DIR
 
         try:
             from multiprocessing import Process
 
             args = (
                 WORK_DIR,
-                DATA_DIR,
+                WORK_DIR,
                 load_path,
                 shared_path,
                 run_id,
