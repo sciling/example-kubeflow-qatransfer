@@ -8,4 +8,4 @@ install: finalize
 	pip install -r requirements.txt
 
 tests: install
-	python -m unittest $PWD/tests/semeval/test_semeval_{prepro,train,generate_files,test}.py
+	python -m unittest /tmp/qa/tests/semeval/test_semeval_{prepro,train,generate_files,test}.py
