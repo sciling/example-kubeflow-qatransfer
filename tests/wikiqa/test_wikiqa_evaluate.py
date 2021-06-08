@@ -1,4 +1,3 @@
-import pathlib
 import sys
 import tempfile
 import unittest
@@ -6,9 +5,7 @@ import unittest
 
 sys.path.append("..")
 
-
-DATA_DIR = "%s/../../data/test/wikiqa_files" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = tempfile.mkdtemp()
+WORK_DIR = '/tmp/wikiqa-tests'
 
 
 class TestAll(unittest.TestCase):
@@ -24,14 +21,14 @@ class TestAll(unittest.TestCase):
         mlpipeline_metrics_path = tempfile.NamedTemporaryFile()
 
         wikiqa_evaluate(
-            DATA_DIR,
-            DATA_DIR,
+            WORK_DIR,
+            WORK_DIR,
             start_step,
             end_step,
             eval_period,
             run_ids,
             mlpipeline_metrics_path.name,
-        )
+            )
 
         with open(mlpipeline_metrics_path.name, "r") as f:
             metrics = json.load(f)
