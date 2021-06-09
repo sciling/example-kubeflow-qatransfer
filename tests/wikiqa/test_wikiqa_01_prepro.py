@@ -10,12 +10,13 @@ sys.path.append("..")
 
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/wikiqa-tests'
+WORK_DIR = "/tmp/wikiqa-tests"
 
 
 class TestAll(TestCase):
     def test_prepro(self):
         from src.wikiqa.wikiqa_prepro import prepro_class
+
         # Directory of the model
         # Directory of the model
         wikiqa_path = WORK_DIR

@@ -5,12 +5,13 @@ import unittest
 
 sys.path.append("..")
 
-WORK_DIR = '/tmp/wikiqa-tests'
+WORK_DIR = "/tmp/wikiqa-tests"
 
 
 class TestAll(unittest.TestCase):
     def test_test(self):
         import json
+
         from src.wikiqa.wikiqa_test import wikiqa_test
 
         shared_path = "/save/out/squad/basic-class/00/shared.json"
@@ -42,7 +43,7 @@ class TestAll(unittest.TestCase):
                 save_period,
                 mlpipeline_metrics_path.name,
                 model_dir,
-                )
+            )
             p = Process(target=wikiqa_test, args=args)
             p.start()
             p.join()

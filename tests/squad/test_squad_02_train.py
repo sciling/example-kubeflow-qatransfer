@@ -8,12 +8,13 @@ sys.path.append("..")
 
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/squad-tests'
+WORK_DIR = "/tmp/squad-tests"
 
 
 class TestAll(unittest.TestCase):
     def test_train(self):
         from src.squad.train import train
+
         squad_path = WORK_DIR
         sent_size_th = "10"
         ques_size_th = "10"
@@ -44,7 +45,7 @@ class TestAll(unittest.TestCase):
                 var_decay,
                 training_mode,
                 model_path,
-                )
+            )
             p = Process(target=train, args=args)
             p.start()
             p.join()

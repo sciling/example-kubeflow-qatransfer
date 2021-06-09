@@ -10,7 +10,9 @@ except ImportError:
         return c
 
 
-def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str), **kwargs):
+def semeval_prepro(
+    dataset_path: InputPath(str), semeval_path: OutputPath(str), **kwargs
+):
     import json
     import os
 
@@ -162,7 +164,14 @@ def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str), 
                         for xijkl in xijk:
                             char_counter[xijkl] += 1
 
-                with open(os.path.join(args.target_dir, "shared_%s_%s_%s.json" % (data_type, str(ai).zfill(3), str(pi).zfill(3)),), "w") as fd:
+                with open(
+                    os.path.join(
+                        args.target_dir,
+                        "shared_%s_%s_%s.json"
+                        % (data_type, str(ai).zfill(3), str(pi).zfill(3)),
+                    ),
+                    "w",
+                ) as fd:
                     json.dump({"x": xi, "cx": cxi, "p": story}, fd)
 
                 def put():

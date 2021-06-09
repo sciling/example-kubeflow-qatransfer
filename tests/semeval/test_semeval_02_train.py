@@ -11,7 +11,7 @@ sys.path.append("..")
 
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/semeval-tests'
+WORK_DIR = "/tmp/semeval-tests"
 
 
 def download_squad():
@@ -21,7 +21,7 @@ def download_squad():
 
     from tqdm import tqdm
 
-    if not os.path.exists(os.path.join(WORK_DIR, 'save/out/squad/basic/00/save')):
+    if not os.path.exists(os.path.join(WORK_DIR, "save/out/squad/basic/00/save")):
         r_squad = requests.get(
             "http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip "
         )
@@ -37,7 +37,7 @@ def download_squad():
         if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
             print("ERROR, something went wrong")
     else:
-        print('SQUAD models already downloaded')
+        print("SQUAD models already downloaded")
 
 
 class TestAll(TestCase):

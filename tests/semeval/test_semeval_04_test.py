@@ -1,7 +1,7 @@
+import os
 import pathlib
 import sys
 import tempfile
-import os
 import unittest
 
 from unittest import TestCase
@@ -10,7 +10,7 @@ from unittest import TestCase
 sys.path.append("..")
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/semeval-tests'
+WORK_DIR = "/tmp/semeval-tests"
 
 
 class TestAll(TestCase):
@@ -19,7 +19,7 @@ class TestAll(TestCase):
 
         from src.semeval.semeval_test import semeval_test
 
-        mlpipeline_metrics_path = os.path.join(WORK_DIR, 'semeval/metric.json')
+        mlpipeline_metrics_path = os.path.join(WORK_DIR, "semeval/metric.json")
 
         semeval_test(
             WORK_DIR,

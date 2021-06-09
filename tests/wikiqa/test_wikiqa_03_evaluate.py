@@ -5,7 +5,7 @@ import unittest
 
 sys.path.append("..")
 
-WORK_DIR = '/tmp/wikiqa-tests'
+WORK_DIR = "/tmp/wikiqa-tests"
 
 
 class TestAll(unittest.TestCase):
@@ -28,7 +28,7 @@ class TestAll(unittest.TestCase):
             eval_period,
             run_ids,
             mlpipeline_metrics_path.name,
-            )
+        )
 
         with open(mlpipeline_metrics_path.name, "r") as f:
             metrics = json.load(f)

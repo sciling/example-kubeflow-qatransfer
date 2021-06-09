@@ -47,7 +47,7 @@ We provide the following files:
 
 * MAIN files
 
-  * README.txt 
+  * README.txt
     this file
 
   * train/SemEval2016-Task3-CQA-QL-train-part1.xml
@@ -75,7 +75,7 @@ We provide the following files:
 
 
   * train/SemEval2016-Task3-CQA-QL-train-part1-subtaskA.xml
-    Same as train/SemEval2016-Task3-CQA-QL-train-part1.xml, but containing only the relevant information for subtask A, with duplicated related questions removed. 
+    Same as train/SemEval2016-Task3-CQA-QL-train-part1.xml, but containing only the relevant information for subtask A, with duplicated related questions removed.
 
   * train/SemEval2016-Task3-CQA-QL-train-part2-subtaskA.xml
     Same as train/SemEval2016-Task3-CQA-QL-train-part2.xml, but containing only the relevant information for subtask A, with duplicated related questions removed.
@@ -178,7 +178,7 @@ For ease of explanation, here we list the English subtasks of SemEval-2016 Task 
   Given a question and the first 10 comments in its question thread, rerank these 10 comments according to their relevance with respect to the question.
 
 * Subtask B (English): Question-Question Similarity
-  Given a new question (aka original question) and the set of the first 10 related questions (retrieved by a search engine), rerank the related questions according to their similarity with the original question. 
+  Given a new question (aka original question) and the set of the first 10 related questions (retrieved by a search engine), rerank the related questions according to their similarity with the original question.
 
 * Subtask C (English): Question-External Comment Similarity -- this is the main English subtask.
   Given a new question (aka the original question) and the set of the first 10 related questions (retrieved by a search engine), each associated with its first 10 comments appearing in its thread, rerank the 100 comments (10 questions x 10 comments) according to their relevance with respect to the original question.
@@ -248,7 +248,7 @@ Each RelQuestion tag has a list of attributes, as in the following example:
 - RELQ_DATE: date of posting
 - RELQ_USERID: internal identifier for the user who posted the question; consistent across all questions and across all datasets
 - RELQ_USERNAME: the name of the user who posted the question; consistent across questions and comments; note that users can change their names over time, and this field shows the latest name the user used (but this name is consistent across the questions, comments and the datasets)
-- RELQ_RELEVANCE2ORGQ: relevance of the thread of this RelQuestion with respect to the OrgQuestion. This label could be 
+- RELQ_RELEVANCE2ORGQ: relevance of the thread of this RelQuestion with respect to the OrgQuestion. This label could be
   - PerfectMatch: RelQuestion matches OrgQuestion (almost) perfectly (at test time, this is to be merged with Relevant)
   - Relevant: RelQuestion covers some aspects of OrgQuestion
   - Irrelevant: RelQuestion covers no aspects of OrgQuestion
@@ -280,7 +280,7 @@ Each RelComment tag has a list of attributes, as in the following example:
      - PotentiallyUseful: no subquestion is directly answered, but the comment gives potentially useful information about one or more subquestions (at test time, this class will be merged with "Bad")
      - Bad: no subquestion is answered and no useful information is provided (e.g., the answer is another question, a thanks, dialog with another user, a joke, irony, attack of other users, or is not in English, etc.).
 - RELC_RELEVANCE2RELQ: human assessment about whether the comment is "Good", "Bad", or "PotentiallyUseful" (the latter two will be merged under "Bad" at test time) with respect to the *related* question, RelQuestion
- 
+
 Comments are structured as follows:
 
 <RelComment ...>
@@ -296,7 +296,7 @@ NOTE: In the *-with-multiline.xml files, <RelCBody> contain the original unclean
 
 The source of the CQA-QL corpus is the Qatar Living Forum (http://www.qatarliving.com). A sample of questions and comments threads was automatically selected, manually filtered and annotated with the categories defined in the task.
 
-After a first internal labeling of a small dataset by several independent annotators, we defined the annotation procedure and we prepared detailed annotation guidelines. 
+After a first internal labeling of a small dataset by several independent annotators, we defined the annotation procedure and we prepared detailed annotation guidelines.
 
 CrowdFlower was used to collect the human annotations for the large corpus. In all HITs, we collected the annotation of several annotators for each decision (there were at least three human annotators) and we resolved the discrepancies using the mechanisms of CrowdFlower. Unlike SemEval-2015 Task 3, this time we did not eliminate any comments, and thus there is a guarantee that for each question thread, we have the first 10 comments without any comment being skipped.
 
@@ -319,7 +319,7 @@ TRAIN-part1: (higher quality)
             - Good:               1,988
             - Bad:               16,319
             - PotentiallyUseful:  1,683 (at test time, merged with "Bad")
-    - wrt RELATED QUESTION: 
+    - wrt RELATED QUESTION:
         - TOTAL:                 14,110 (<-- subtask A)
             - Good:               5,287
             - Bad:                6,362
@@ -339,7 +339,7 @@ TRAIN-part2: (lower quality)
             - Good:                849
             - Bad:               5,154
             - PotentiallyUseful:   697 (at test time, merged with "Bad")
-    - wrt RELATED QUESTION: 
+    - wrt RELATED QUESTION:
         - TOTAL:                 3,790 (<-- subtask A)
             - Good:              1,364
             - Bad:               1,777
@@ -360,7 +360,7 @@ DEV: (highest quality)
             - Good:                345
             - Bad:               4,061
             - PotentiallyUseful:   594 (at test time, merged with "Bad")
-    - wrt RELATED QUESTION: 
+    - wrt RELATED QUESTION:
         - TOTAL:                 2,440 (<-- subtask A)
             - Good:                818
             - Bad:               1,209

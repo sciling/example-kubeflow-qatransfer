@@ -1,25 +1,28 @@
 import os
 import pathlib
 import sys
+import tempfile
 import unittest
 import zipfile
-import tempfile
-import requests
-from tqdm import tqdm
+
 from unittest import TestCase
+
+import requests
+
+from tqdm import tqdm
 
 
 sys.path.append("..")
 
 
-WORK_DIR = '/tmp/wikiqa-tests'
+WORK_DIR = "/tmp/wikiqa-tests"
 
 
 def download():
     # Download Squad
     r_squad = requests.get(
         "https://github.com/sciling/qatransfer/releases/download/v0.1/save_class.zip"
-        )
+    )
     total_size_in_bytes = int(r_squad.headers.get("content-length", 0))
     progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)
     with tempfile.TemporaryFile() as tf:
@@ -37,6 +40,7 @@ class TestAll(TestCase):
     def test_train(self):
 
         from src.wikiqa.wikiqa_train import wikiqa_train
+
         download()
         load_path = "/save/out/squad/basic-class/00/save/basic-class-1"
         shared_path = "/save/out/squad/basic-class/00/shared.json"
@@ -65,7 +69,7 @@ class TestAll(TestCase):
                 eval_period,
                 save_period,
                 model_path,
-                )
+            )
             p = Process(target=wikiqa_train, args=args)
             p.start()
             p.join()

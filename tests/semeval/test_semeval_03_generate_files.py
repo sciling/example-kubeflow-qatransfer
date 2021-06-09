@@ -11,7 +11,7 @@ sys.path.append("..")
 
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/semeval-tests'
+WORK_DIR = "/tmp/semeval-tests"
 
 
 class TestAll(TestCase):

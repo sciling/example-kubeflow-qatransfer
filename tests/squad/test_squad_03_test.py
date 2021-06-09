@@ -3,16 +3,18 @@ import sys
 import tempfile
 import unittest
 
+
 sys.path.append("..")
 
 
 DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = '/tmp/squad-tests'
+WORK_DIR = "/tmp/squad-tests"
 
 
 class TestAll(unittest.TestCase):
     def test_test(self):
         import json
+
         from src.squad.test import test
 
         prepro_dir = WORK_DIR
@@ -49,7 +51,7 @@ class TestAll(unittest.TestCase):
                 training_mode,
                 mlpipeline_metrics_path.name,
                 model_dir,
-                )
+            )
             p = Process(target=test, args=args)
             p.start()
             p.join()
