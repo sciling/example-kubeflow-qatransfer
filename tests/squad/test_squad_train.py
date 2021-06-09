@@ -1,22 +1,20 @@
 import os
 import pathlib
 import sys
-import tempfile
 import unittest
 
 
 sys.path.append("..")
 
 
-DATA_DIR = "%s/../../data/test/squad_files" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = tempfile.mkdtemp()
+DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
+WORK_DIR = '/tmp/squad-tests'
 
 
 class TestAll(unittest.TestCase):
     def test_train(self):
         from src.squad.train import train
-
-        squad_path = DATA_DIR
+        squad_path = WORK_DIR
         sent_size_th = "10"
         ques_size_th = "10"
         num_epochs = "1"
@@ -28,7 +26,7 @@ class TestAll(unittest.TestCase):
         hidden_size = "100"
         var_decay = "0.999"
         training_mode = "span"
-        model_path = tempfile.mkdtemp()
+        model_path = WORK_DIR
         try:
             from multiprocessing import Process
 
@@ -46,7 +44,7 @@ class TestAll(unittest.TestCase):
                 var_decay,
                 training_mode,
                 model_path,
-            )
+                )
             p = Process(target=train, args=args)
             p.start()
             p.join()

@@ -3,22 +3,20 @@ import sys
 import tempfile
 import unittest
 
-
 sys.path.append("..")
 
 
-DATA_DIR = "%s/../../data/test/squad_files" % pathlib.Path(__file__).parent.absolute()
-WORK_DIR = tempfile.mkdtemp()
+DATA_DIR = "%s/../../data/test" % pathlib.Path(__file__).parent.absolute()
+WORK_DIR = '/tmp/squad-tests'
 
 
 class TestAll(unittest.TestCase):
     def test_test(self):
         import json
-
         from src.squad.test import test
 
-        prepro_dir = DATA_DIR
-        prev_model_dir = DATA_DIR
+        prepro_dir = WORK_DIR
+        prev_model_dir = WORK_DIR
         sent_size_th = "10"
         ques_size_th = "10"
         num_epochs = "1"
@@ -51,7 +49,7 @@ class TestAll(unittest.TestCase):
                 training_mode,
                 mlpipeline_metrics_path.name,
                 model_dir,
-            )
+                )
             p = Process(target=test, args=args)
             p.start()
             p.join()
