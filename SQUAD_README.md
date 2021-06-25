@@ -22,6 +22,9 @@ The aim of this pipeline is to train an expert model of question answering with 
 |train_hidden_size| Integer representing the hidden size (e.g 100)|
 |train_var_decay| Integer representing the exponential decay (e.g 0.999)|
 |training_mode|String representig the preprocess mode ("span" or "class")|
+|device| String representing the default device for summing gradients. ("/cpu:0")|
+|device_type| String representing the device for computing gradients (parallelization) ("cpu" or "gpu" )|
+|num_gpus| Integer representing the number of gpus or cpus for computing gradients (1)|
 
 # Default parameters #
 Taking into account the following text extracted from [BI-DIRECTIONAL ATTENTION FLOW
@@ -49,6 +52,9 @@ we have defined default parameters as optimal ones:
 |train_hidden_size| 100|
 |train_var_decay| 0.999|
 |training_mode|span|
+|device| "/cpu:0"|
+|device_type| "gpu"|
+|num_gpus| 1 |
 
 # Pipeline stages #
 
@@ -115,6 +121,10 @@ In order to check the validity of the pipeline, we are going to execute a run. A
 |train_hidden_size| 100|
 |train_var_decay| 0.999|
 |training_mode|span|
+|device| "/cpu:0"|
+|device_type| "gpu"|
+|num_gpus| 1 |
+
 
 ### Metrics ###
 Using the predefined parameters, we obtain the following results:

@@ -17,6 +17,9 @@ The aim of this pipeline is to train a model of question answering with the wiki
 |save_period| Period to perform save on train (e.g '10').|
 |start_step| Integer representing the step to start. Depends on the selected model (e.g if we use basic-class-1 in load_path, starting step will be 2)|
 |end_step| Integer representing the step to end (e.g 2).|
+|device| String representing the default device for summing gradients. ("/cpu:0")|
+|device_type| String representing the device for computing gradients (parallelization) ("cpu" or "gpu" )|
+|num_gpus| Integer representing the number of gpus or cpus for computing gradients (1)|
 
 # Pipeline stages #
 
@@ -71,6 +74,10 @@ In order to check the validity of the pipeline, we are going to execute a run. A
 |save_period| '1'|
 |start_step| 2 |
 |end_step| 2|
+|device| "/cpu:0"|
+|device_type| "gpu"|
+|num_gpus| 1 |
+
 
 
 ### Metrics ###

@@ -24,6 +24,9 @@ The aim of this pipeline is to train a model of question answering with the seme
 |test_format| Format of the result file (e.g 'trec' or 'answerbag')|
 |test_verbose| Produce verbose output (e.g False)|
 |test_ignore_noanswer| Ignore questions with no correct answer (e.g False)|
+|device| String representing the default device for summing gradients. ("/cpu:0")|
+|device_type| String representing the device for computing gradients (parallelization) ("cpu" or "gpu" )|
+|num_gpus| Integer representing the number of gpus or cpus for computing gradients (1)|
 
 # Pipeline stages #
 
@@ -85,6 +88,10 @@ In order to check the validity of the pipeline, we are going to execute a run. A
 |test_format| 'trec'|
 |test_verbose| False |
 |test_ignore_noanswer| False|
+|device| "/cpu:0"|
+|device_type| "gpu"|
+|num_gpus| 1 |
+
 
 ### Metrics ###
 Using a pretrained squad model with one epoch and executing the pipeline with the previously defined parameters, we obtain the following results:
