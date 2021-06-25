@@ -1,0 +1,34 @@
+apiVersion: projectsame.io/v1alpha1
+metadata:
+    name: squad
+    version: 0.0.0
+workflow:
+    type: kubeflow
+    parameters:
+        kubeflowVersion: 1.2
+        kubeflowNamespace: kubeflow # Only support Kubeflow namespace
+        credentialFile: porter-kfp
+pipeline:
+    name: "squad_pipeline"
+    description: "Expert model for Question Answering through Transfer Learning"
+    package: "src/squad/pipeline.py"
+run:
+    name: "default"
+    parameters:
+        prepro_train_ratio: 0.9
+        prepro_glove_vec_size: 100
+        prepro_mode: "full"
+        prepro_tokenizer: "PTB"
+        prepro_url: "vision-server2.corp.ai2"
+        prepro_port: 8000
+        train_sent_size_th: "500"
+        train_ques_size_th: "30"
+        train_num_epochs: "12"
+        train_num_steps: "20000"
+        train_eval_period: "500"
+        train_save_period: "500"
+        train_learning_rate: 0.5
+        train_batch_size: 60
+        train_hidden_size: 100
+        train_var_decay: 0.999
+        training_mode: "span"

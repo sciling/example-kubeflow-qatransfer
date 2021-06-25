@@ -1,0 +1,36 @@
+apiVersion: projectsame.io/v1alpha1
+metadata:
+    name: semeval
+    version: 0.0.0
+workflow:
+    type: kubeflow
+    parameters:
+        kubeflowVersion: 1.2
+        kubeflowNamespace: kubeflow # Only support Kubeflow namespace
+        credentialFile: porter-kfp
+pipeline:
+    name: "semeval_pipeline"
+    description: "Semeval Question Answering through Transfer Learning"
+    package: "src/semeval/pipeline.py"
+run:
+    name: "default"
+    parameters:
+        squad_url: "http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip"
+        squad_load_path: "/save/out/squad/basic/00/save/basic-2000"
+        squad_shared_path: "/save/out/squad/basic/00/shared.json"
+        train_run_id: "00"
+        train_sent_size_th: "150"
+        train_ques_size_th: "100"
+        train_num_epochs: "12"
+        train_num_steps: "5000"
+        train_eval_period: "200"
+        train_save_period: "200"
+        test_start_step: 2001
+        test_end_step: 2201
+        test_eval_period: 200
+        test_threshold: 0.5
+        test_th: 10
+        test_reranking_th: 10
+        test_format: "trec"
+        test_verbose: False
+        test_ignore_noanswer: False

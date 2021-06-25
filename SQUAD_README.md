@@ -21,6 +21,7 @@ The aim of this pipeline is to train an expert model of question answering with 
 |train_batch_size| Integer representing the size of the bacth (e.g 60)|
 |train_hidden_size| Integer representing the hidden size (e.g 100)|
 |train_var_decay| Integer representing the exponential decay (e.g 0.999)|
+|training_mode|String representig the preprocess mode ("span" or "class")|
 
 # Default parameters #
 Taking into account the following text extracted from [BI-DIRECTIONAL ATTENTION FLOW
@@ -47,6 +48,7 @@ we have defined default parameters as optimal ones:
 |train_batch_size| 60|
 |train_hidden_size| 100|
 |train_var_decay| 0.999|
+|training_mode|span|
 
 # Pipeline stages #
 
@@ -55,24 +57,27 @@ we have defined default parameters as optimal ones:
 ##### 1. Download dataset ([code](./src/squad/download.py))
 This component downloads the squad and glove dataset inside an OutputPath Artifact
 
-##### 2. Preprocess ([code](./src/squad/prepro.py))
-This component preprocess the squad dataset and save generated files inside an OutputPath Artifact.
+##### 2.1. Prepro basic ([code](./src/squad/prepro.py))
+This component preprocess the squad dataset and save generated files inside an OutputPath Artifact. Only executed if training mode equals span
+
+##### 2.2. Convert2class and Prepro class ([code](./src/squad/prepro.py))
+This components preprocess the squad dataset, converting it in classes and save generated files inside an OutputPath Artifact.
 
 ##### 3. Train ([code](./src/squad/train.py))
 This component trains the squad dataset taken into account squad preprocess generated files and save generated model inside an OutputPath Artifact.
 
 ##### 4. Test ([code](./src/squad/test.py))
-This component generated tested the model and creates a metric that the kubeflow UI can understand in order to visualize the accuracy and f1-score of the trained model.
+This component tests the model and creates a different metrics that the kubeflow UI can understand, in order to visualize the accuracy and f1-score (if training mode equals span) or the accuracy and loss (if training mode equals class) of the trained model.
 
 # File generation #
 To generate the pipeline from the python file, execute the following command:
 
 ```python3 pipeline.py```
 
-pipeline.py is located inside src folder. The pipeline will be created at the same directory that the command is executed.
+pipeline.py is located inside src/squad folder. The pipeline will be created at the same directory that the command is executed.
 
 Also, if you want to run all tests locally, execute:
-```python3 -m unittest tests/*_test.py```
+``` ./run_squad_tests.sh ```
 
 Once the pipeline has been created, we can upload the generated zip file in kubeflow UI and create runs of it.
 
@@ -83,7 +88,6 @@ In the semeval pipeline, you need a link that downloads the squad model as a zip
 1.  Download the generated model from the minio server.
 2.  Create a Github release and upload there the zipped model.
 3.  Check the request made by your browser when you click on the released model. In the request, there will be a link similar to http://github.com/sciling/qatransfer/releases/download/v0.1/save.zip that will work as squad_url in the semeval pipeline.
-
 
 # Experimental results #
 
@@ -106,6 +110,11 @@ In order to check the validity of the pipeline, we are going to execute a run. A
 |train_num_steps|1|
 |train_eval_period|1|
 |train_save_period|1|
+|train_learning_rate| 0.5|
+|train_batch_size| 60|
+|train_hidden_size| 100|
+|train_var_decay| 0.999|
+|training_mode|span|
 
 ### Metrics ###
 Using the predefined parameters, we obtain the following results:
@@ -113,6 +122,12 @@ Using the predefined parameters, we obtain the following results:
 | Accuracy | f1-score |
 | ------ | ------ |
 | 0.008	 | 0.030 |
+
+If instead of span, we put class as training:mode, leaving the rest of the parameters as defined, we obtain:
+
+|Accuracy| Loss |
+|-----|------|
+|0.549|0.692|
 
 The original results are shown in. In particular, we show the accuracy achived in ["Question Answering through Transfer Learning from Large Fine-grained Supervision Data](https://www.aclweb.org/anthology/P17-2081.pdf) and the F1 score achieved in [Bi-directional Attention Flow](https://arxiv.org/pdf/1611.01603.pdf):
 

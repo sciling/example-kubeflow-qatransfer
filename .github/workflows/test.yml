@@ -31,4 +31,4 @@ jobs:
     #----------------------------------------------
     - name: Run tests
       shell: bash
-      run: docker run --rm -v $PWD:/qa-transfer -w /qa-transfer ${{ matrix.docker-image-version }} make tests
+      run: docker run --rm -v $PWD:/qa-transfer -w /qa-transfer -e TF_CPP_MIN_LOG_LEVEL=2 ${{ matrix.docker-image-version }} make tests

@@ -13,53 +13,47 @@ except ImportError:
 metrics = "Metrics"
 
 
-def test(
-    prepro_dir: InputPath(str),
-    prev_model_dir: InputPath(str),
+def wikiqa_test(
+    dataset_path: InputPath(str),
+    wikiqa_path: InputPath(str),
+    prev_model_path: InputPath(str),
+    shared_path,
+    run_id,
     sent_size_th,
     ques_size_th,
     num_epochs,
     num_steps,
     eval_period,
     save_period,
-    learning_rate,
-    batch_size,
-    hidden_size,
-    var_decay,
-    training_mode,
     mlpipeline_metrics_path: OutputPath(metrics),
-    model_dir: OutputPath(str),
+    model_path: OutputPath(str),
 ):
+    input_dir = wikiqa_path + "/wikiqa-class"
+    output_dir = model_path + "/out/wikiqa"
 
-    import os
     import shutil
 
-    import tensorflow as tf
-
-    src = prev_model_dir + "/out/squad"
-    dst = model_dir + "/out/squad"
+    src = prev_model_path + "/out/wikiqa"
+    dst = model_path + "/out/wikiqa"
     shutil.copytree(src, dst)
 
-    model_name = "basic" if training_mode == "span" else "basic-class"
-    data_dir = (
-        prepro_dir + "/squad"
-        if training_mode == "span"
-        else prepro_dir + "/squad-class"
-    )
-    output_dir = model_dir + "/out/squad"
+    full_shared_path = dataset_path + shared_path
+    import os
+
+    import tensorflow as tf
 
     flags = tf.app.flags
 
     # Names and directories
-    flags.DEFINE_string("model_name", model_name, "Model name [basic | basic-class]")
-    flags.DEFINE_string("data_dir", data_dir, "Data dir [data/squad]")
-    flags.DEFINE_string("run_id", "0", "Run ID [0]")
+    flags.DEFINE_string("model_name", "basic-class", "Model name [basic | basic-class]")
+    flags.DEFINE_string("data_dir", input_dir, "Data dir [data/squad]")
+    flags.DEFINE_string("run_id", run_id, "Run ID [0]")
     flags.DEFINE_string("out_base_dir", output_dir, "out base dir [out]")
     flags.DEFINE_string("forward_name", "single", "Forward name [single]")
     flags.DEFINE_string("answer_path", "", "Answer path []")
     flags.DEFINE_string("eval_path", "", "Eval path []")
     flags.DEFINE_string("load_path", "", "Load path []")
-    flags.DEFINE_string("shared_path", "", "Shared path []")
+    flags.DEFINE_string("shared_path", full_shared_path, "Shared path []")
 
     # Device placement
     flags.DEFINE_string(
@@ -94,10 +88,10 @@ def test(
     flags.DEFINE_bool("using_shared", False, "using pre-created shared.json")
     flags.DEFINE_bool("load_shared", False, "load shared.json for each batch")
     flags.DEFINE_string("dev_name", "test", "using dev or test?")
-    flags.DEFINE_string("test_name", "dev", "using test or dev?")
+    flags.DEFINE_string("test_name", "test", "using test or dev?")
 
     # Training / test parameters
-    flags.DEFINE_integer("batch_size", int(batch_size), "Batch size [60]")
+    flags.DEFINE_integer("batch_size", 60, "Batch size [60]")
     flags.DEFINE_integer("val_num_batches", 100, "validation num batches [100]")
     flags.DEFINE_integer("test_num_batches", 0, "test num batches [0]")
     flags.DEFINE_integer(
@@ -105,7 +99,7 @@ def test(
     )
     flags.DEFINE_integer("num_steps", int(num_steps), "Number of steps [20000]")
     flags.DEFINE_integer("load_step", 0, "load step [0]")
-    flags.DEFINE_float("init_lr", float(learning_rate), "Initial learning rate [0.5]")
+    flags.DEFINE_float("init_lr", 0.5, "Initial learning rate [0.5]")
     flags.DEFINE_float(
         "input_keep_prob", 0.8, "Input keep prob for the dropout of LSTM weights [0.8]"
     )
@@ -113,7 +107,7 @@ def test(
         "keep_prob", 0.8, "Keep prob for the dropout of Char-CNN weights [0.8]"
     )
     flags.DEFINE_float("wd", 0.0, "L2 weight decay for regularization [0.0]")
-    flags.DEFINE_integer("hidden_size", int(hidden_size), "Hidden size [100]")
+    flags.DEFINE_integer("hidden_size", 100, "Hidden size [100]")
     flags.DEFINE_integer("char_out_size", 100, "char-level word embedding size [100]")
     flags.DEFINE_integer("char_emb_size", 8, "Char emb size [8]")
     flags.DEFINE_string(
@@ -134,9 +128,7 @@ def test(
         "Share pre-processing (phrase-level) LSTM weights [True]",
     )
     flags.DEFINE_float(
-        "var_decay",
-        float(var_decay),
-        "Exponential moving average decay for variables [0.999]",
+        "var_decay", 0.999, "Exponential moving average decay for variables [0.999]"
     )
     flags.DEFINE_string("classifier", "maxpool", "[maxpool, sumpool, default]")
 
@@ -194,42 +186,29 @@ def test(
         from basic.main import main as m
 
         config = flags.FLAGS
+        config.model_name = "basic-class"
         config.out_dir = os.path.join(
             config.out_base_dir, config.model_name, str(config.run_id).zfill(2)
         )
+
+        print(config.out_dir)
         evaluator = m(config)
 
         """Generating metrics for the squad model"""
-        if training_mode == "span":
-            metrics = {
-                "metrics": [
-                    {
-                        "name": "accuracy-score",
-                        "numberValue": str(evaluator.acc),
-                        "format": "RAW",
-                    },
-                    {
-                        "name": "f1-score",
-                        "numberValue": str(evaluator.f1),
-                        "format": "RAW",
-                    },
-                ]
-            }
-        else:
-            metrics = {
-                "metrics": [
-                    {
-                        "name": "accuracy-score",
-                        "numberValue": str(evaluator.acc),
-                        "format": "RAW",
-                    },
-                    {
-                        "name": "loss",
-                        "numberValue": str(evaluator.loss),
-                        "format": "RAW",
-                    },
-                ]
-            }
+        metrics = {
+            "metrics": [
+                {
+                    "name": "accuracy-score",
+                    "numberValue": str(evaluator.acc),
+                    "format": "RAW",
+                },
+                {
+                    "name": "loss",
+                    "numberValue": str(evaluator.loss),
+                    "format": "RAW",
+                },
+            ]
+        }
 
         import json
 

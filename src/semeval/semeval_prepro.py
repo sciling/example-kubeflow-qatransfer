@@ -10,7 +10,9 @@ except ImportError:
         return c
 
 
-def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
+def semeval_prepro(
+    dataset_path: InputPath(str), semeval_path: OutputPath(str), **kwargs
+):
     import json
     import os
 
@@ -47,8 +49,10 @@ def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
     def save(target_dir, data, shared, data_type):
         data_path = os.path.join(target_dir, "data_{}.json".format(data_type))
         shared_path = os.path.join(target_dir, "shared_{}.json".format(data_type))
-        json.dump(data, open(data_path, "w"))
-        json.dump(shared, open(shared_path, "w"))
+        with open(data_path, "w") as fd:
+            json.dump(data, fd)
+        with open(shared_path, "w") as fd:
+            json.dump(shared, fd)
 
     def get_word2vec(glove_dir, word_counter):
         glove_corpus = "6B"
@@ -159,17 +163,16 @@ def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
                         lower_word_counter[xijk.lower()] += 1
                         for xijkl in xijk:
                             char_counter[xijkl] += 1
-                json.dump(
-                    {"x": xi, "cx": cxi, "p": story},
-                    open(
-                        os.path.join(
-                            args.target_dir,
-                            "shared_%s_%s_%s.json"
-                            % (data_type, str(ai).zfill(3), str(pi).zfill(3)),
-                        ),
-                        "w",
+
+                with open(
+                    os.path.join(
+                        args.target_dir,
+                        "shared_%s_%s_%s.json"
+                        % (data_type, str(ai).zfill(3), str(pi).zfill(3)),
                     ),
-                )
+                    "w",
+                ) as fd:
+                    json.dump({"x": xi, "cx": cxi, "p": story}, fd)
 
                 def put():
                     q.append(qi)
@@ -210,5 +213,3 @@ def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
 
     args = get_args()
     prepro(args)
-
-    print(os.listdir(semeval_path + "/semeval"))
