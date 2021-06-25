@@ -27,6 +27,9 @@ def test(
     hidden_size,
     var_decay,
     training_mode,
+    device,
+    device_type,
+    num_gpus,
     mlpipeline_metrics_path: OutputPath(metrics),
     model_dir: OutputPath(str),
 ):
@@ -63,15 +66,15 @@ def test(
 
     # Device placement
     flags.DEFINE_string(
-        "device", "/cpu:0", "default device for summing gradients. [/cpu:0]"
+        "device", device, "default device for summing gradients. [/cpu:0]"
     )
     flags.DEFINE_string(
         "device_type",
-        "gpu",
+        device_type,
         "device for computing gradients (parallelization). cpu | gpu [gpu]",
     )
     flags.DEFINE_integer(
-        "num_gpus", 1, "num of gpus or cpus for computing gradients [1]"
+        "num_gpus", int(num_gpus), "num of gpus or cpus for computing gradients [1]"
     )
 
     # Essential training and test options

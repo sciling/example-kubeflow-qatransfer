@@ -16,6 +16,9 @@ def qa_pipeline(
     save_period: str = "200",
     start_step: int = 2001,
     end_step: int = 2201,
+    device: str = "/cpu:0",
+    device_type: str = "gpu",
+    num_gpus: int = 1,
 ):
     from download import download
     from wikiqa_evaluate import wikiqa_evaluate
@@ -31,7 +34,7 @@ def qa_pipeline(
 
     wikiqa_prepro_op = func_to_container_op(
         prepro_class,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -39,7 +42,7 @@ def qa_pipeline(
 
     train_op = func_to_container_op(
         wikiqa_train,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -47,7 +50,7 @@ def qa_pipeline(
 
     evaluate_op = func_to_container_op(
         wikiqa_evaluate,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -55,7 +58,7 @@ def qa_pipeline(
 
     test_op = func_to_container_op(
         wikiqa_test,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -80,6 +83,9 @@ def qa_pipeline(
         num_steps=num_steps,
         eval_period=eval_period,
         save_period=save_period,
+        device=device,
+        device_type=device_type,
+        num_gpus=num_gpus,
     )
 
     evaluate_op(
@@ -103,6 +109,9 @@ def qa_pipeline(
         num_steps=num_steps,
         eval_period=eval_period,
         save_period=save_period,
+        device=device,
+        device_type=device_type,
+        num_gpus=num_gpus,
     )
 
 

@@ -30,6 +30,9 @@ class TestAll(unittest.TestCase):
         hidden_size = "100"
         var_decay = "0.999"
         training_mode = "span"
+        device = "/cpu:0"
+        device_type = "gpu"
+        num_gpus = "1"
         mlpipeline_metrics_path = tempfile.NamedTemporaryFile()
         model_dir = tempfile.mkdtemp()
         try:
@@ -49,6 +52,9 @@ class TestAll(unittest.TestCase):
                 hidden_size,
                 var_decay,
                 training_mode,
+                device,
+                device_type,
+                num_gpus,
                 mlpipeline_metrics_path.name,
                 model_dir,
             )

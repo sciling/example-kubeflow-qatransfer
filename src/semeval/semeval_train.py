@@ -22,6 +22,9 @@ def semeval_train(
     num_steps,
     eval_period,
     save_period,
+    device,
+    device_type,
+    num_gpus,
     model_path: OutputPath(str),
 ):
     import tensorflow as tf
@@ -61,5 +64,11 @@ def semeval_train(
             eval_period,
             "--save_period",
             save_period,
+            "--device",
+            device,
+            "--device_type",
+            device_type,
+            "--num_gpus",
+            num_gpus,
         ],
     )

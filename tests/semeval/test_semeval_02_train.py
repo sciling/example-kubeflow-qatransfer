@@ -55,6 +55,9 @@ class TestAll(TestCase):
         eval_period = "1"
         save_period = "1"
         model_path = WORK_DIR
+        device = "/cpu:0"
+        device_type = "gpu"
+        num_gpus = "1"
 
         try:
             from multiprocessing import Process
@@ -71,6 +74,9 @@ class TestAll(TestCase):
                 num_steps,
                 eval_period,
                 save_period,
+                device,
+                device_type,
+                num_gpus,
                 model_path,
             )
             p = Process(target=semeval_train, args=args)

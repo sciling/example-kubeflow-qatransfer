@@ -25,6 +25,9 @@ def qa_pipeline(
     test_format: str = "trec",
     test_verbose: bool = False,
     test_ignore_noanswer: bool = False,
+    device: str = "/cpu:0",
+    device_type: str = "gpu",
+    num_gpus: int = 1,
 ):
     from download import download
     from generate_semeval_test_files import generate_semeval_test_files
@@ -39,28 +42,28 @@ def qa_pipeline(
     )
     semeval_prepro_op = comp.func_to_container_op(
         semeval_prepro,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     semeval_train_op = comp.func_to_container_op(
         semeval_train,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     semeval_generate_test_files_op = comp.func_to_container_op(
         generate_semeval_test_files,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     semeval_test_op = comp.func_to_container_op(
         semeval_test,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -85,6 +88,9 @@ def qa_pipeline(
         num_steps=train_num_steps,
         eval_period=train_eval_period,
         save_period=train_save_period,
+        device=device,
+        device_type=device_type,
+        num_gpus=num_gpus,
     )
 
     # Generate files for testing

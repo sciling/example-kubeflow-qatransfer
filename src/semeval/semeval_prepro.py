@@ -10,9 +10,7 @@ except ImportError:
         return c
 
 
-def semeval_prepro(
-    dataset_path: InputPath(str), semeval_path: OutputPath(str), **kwargs
-):
+def semeval_prepro(dataset_path: InputPath(str), semeval_path: OutputPath(str)):
     import json
     import os
 

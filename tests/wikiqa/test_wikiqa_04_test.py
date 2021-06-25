@@ -24,6 +24,9 @@ class TestAll(unittest.TestCase):
         num_steps = "1"
         eval_period = "1"
         save_period = "1"
+        device = "/cpu:0"
+        device_type = "gpu"
+        num_gpus = "1"
         mlpipeline_metrics_path = tempfile.NamedTemporaryFile()
         model_dir = tempfile.mkdtemp()
         try:
@@ -41,6 +44,9 @@ class TestAll(unittest.TestCase):
                 num_steps,
                 eval_period,
                 save_period,
+                device,
+                device_type,
+                num_gpus,
                 mlpipeline_metrics_path.name,
                 model_dir,
             )

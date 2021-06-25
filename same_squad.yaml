@@ -32,3 +32,6 @@ run:
         train_hidden_size: 100
         train_var_decay: 0.999
         training_mode: "span"
+        device: "/cpu:0"
+        device_type: "gpu"
+        num_gpus: 1

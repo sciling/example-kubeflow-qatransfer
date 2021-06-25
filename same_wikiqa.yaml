@@ -27,3 +27,6 @@ run:
         save_period: "200"
         start_step: 2001
         end_step: 2201
+        device: "/cpu:0"
+        device_type: "gpu"
+        num_gpus: 1

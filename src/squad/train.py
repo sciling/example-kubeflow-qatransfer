@@ -23,6 +23,9 @@ def train(
     hidden_size,
     var_decay,
     training_mode,
+    device,
+    device_type,
+    num_gpus,
     model_dir: OutputPath(str),
 ):
     import tensorflow as tf
@@ -67,5 +70,11 @@ def train(
         hidden_size,
         "--var_decay",
         var_decay,
+        "--device",
+        device,
+        "--device_type",
+        device_type,
+        "--num_gpus",
+        num_gpus,
     ]
     tf.app.run(main, argv)

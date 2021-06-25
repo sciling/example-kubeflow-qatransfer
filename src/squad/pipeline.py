@@ -24,6 +24,9 @@ def qa_pipeline(
     train_hidden_size: int = 100,
     train_var_decay: float = 0.999,
     training_mode: str = "span",
+    device: str = "/cpu:0",
+    device_type: str = "gpu",
+    num_gpus: int = 1,
 ):
     # Creating containers from python functions
     from test import test
@@ -41,7 +44,7 @@ def qa_pipeline(
     )
     squad_preprocess_op = func_to_container_op(
         prepro_basic,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer",
             "psutil",
@@ -49,21 +52,21 @@ def qa_pipeline(
     )
     squad_convert2class_op = func_to_container_op(
         convert2class,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     squad_prepro_class_op = func_to_container_op(
         prepro_class,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
     )
     squad_span_pretrain_op = func_to_container_op(
         train,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer",
             "psutil",
@@ -71,7 +74,7 @@ def qa_pipeline(
     )
     squad_test_op = func_to_container_op(
         test,
-        base_image="sciling/tensorflow:0.12.0-py3",
+        base_image="sciling/tensorflow:0.12.0-gpu-py3",
         packages_to_install=[
             "https://github.com/sciling/qatransfer/archive/refs/heads/master.zip#egg=qatransfer"
         ],
@@ -101,6 +104,9 @@ def qa_pipeline(
             train_hidden_size,
             train_var_decay,
             training_mode,
+            device,
+            device_type,
+            num_gpus,
         ).set_memory_request("4G")
         squad_test_op(
             prepro_span.output,
@@ -116,6 +122,9 @@ def qa_pipeline(
             train_hidden_size,
             train_var_decay,
             training_mode,
+            device,
+            device_type,
+            num_gpus,
         )
     with dsl.Condition(training_mode == "class"):
         classes = squad_convert2class_op(dataset_path.output)
@@ -142,6 +151,9 @@ def qa_pipeline(
             train_hidden_size,
             train_var_decay,
             training_mode,
+            device,
+            device_type,
+            num_gpus,
         ).set_memory_request("4G")
         squad_test_op(
             prepro_class.output,
@@ -157,6 +169,9 @@ def qa_pipeline(
             train_hidden_size,
             train_var_decay,
             training_mode,
+            device,
+            device_type,
+            num_gpus,
         )
 
 

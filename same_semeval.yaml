@@ -34,3 +34,6 @@ run:
         test_format: "trec"
         test_verbose: False
         test_ignore_noanswer: False
+        device: "/cpu:0"
+        device_type: "gpu"
+        num_gpus: 1

@@ -28,6 +28,10 @@ class TestAll(unittest.TestCase):
         var_decay = "0.999"
         training_mode = "span"
         model_path = WORK_DIR
+        device = "/cpu:0"
+        device_type = "gpu"
+        num_gpus = "1"
+
         try:
             from multiprocessing import Process
 
@@ -44,6 +48,9 @@ class TestAll(unittest.TestCase):
                 hidden_size,
                 var_decay,
                 training_mode,
+                device,
+                device_type,
+                num_gpus,
                 model_path,
             )
             p = Process(target=train, args=args)
